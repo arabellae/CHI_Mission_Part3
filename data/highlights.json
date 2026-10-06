@@ -1,0 +1,2042 @@
+{
+ "paper": {
+  "title": "Touching Emotions, Smelling Shapes: Exploring Tactile, Olfactory and Emotional Cross-sensory Correspondences in Preschool-aged Children",
+  "authors": [
+   "Tegan Roberts-Morgan",
+   "Min Susan Li",
+   "Priscilla Y. Lo",
+   "Zhuzhi Fan",
+   "Dan Bennett",
+   "Oussama Metatla"
+  ],
+  "venue": "CHI '26, April 13-17, 2026, Barcelona, Spain",
+  "doi": "https://doi.org/10.1145/3772318.3790709",
+  "license": "CC BY 4.0",
+  "pdf_pages": 14,
+  "note": "Page numbers are PDF page numbers (the paper has no printed page numbers). Pages 12-14 end with the references."
+ },
+ "page_sizes": {
+  "1": [
+   612.0,
+   792.0
+  ],
+  "2": [
+   612.0,
+   792.0
+  ],
+  "3": [
+   612.0,
+   792.0
+  ],
+  "4": [
+   612.0,
+   792.0
+  ],
+  "5": [
+   612.0,
+   792.0
+  ],
+  "6": [
+   612.0,
+   792.0
+  ],
+  "7": [
+   612.0,
+   792.0
+  ],
+  "8": [
+   612.0,
+   792.0
+  ],
+  "9": [
+   612.0,
+   792.0
+  ],
+  "10": [
+   612.0,
+   792.0
+  ],
+  "11": [
+   612.0,
+   792.0
+  ],
+  "12": [
+   612.0,
+   792.0
+  ]
+ },
+ "categories": [
+  {
+   "key": "G",
+   "label": "Know first",
+   "question": "What do I need to know first?",
+   "color": "#dcdce1",
+   "style": "highlight",
+   "edge": "#5b5b66",
+   "name": "Know First",
+   "plain_question": "What do I need to know first?",
+   "explain": "Key words and earlier research you need before the results make sense."
+  },
+  {
+   "key": "B",
+   "label": "Why the study",
+   "question": "Why did they run this study?",
+   "color": "#c4e3ff",
+   "style": "highlight",
+   "edge": "#1f6fb2",
+   "name": "Why the Study",
+   "plain_question": "Why did they run this study?",
+   "explain": "What scientists did not yet know, and the question this study set out to answer."
+  },
+  {
+   "key": "S",
+   "label": "What they did",
+   "question": "What did they actually do?",
+   "color": "#cdf3c6",
+   "style": "highlight",
+   "edge": "#2f7d2a",
+   "name": "What They Did",
+   "plain_question": "What did they actually do?",
+   "explain": "Who took part, what the children touched and smelled, and how the session ran."
+  },
+  {
+   "key": "R",
+   "label": "What they found",
+   "question": "What did they find?",
+   "color": "#ffd3e6",
+   "style": "highlight",
+   "edge": "#b8326f",
+   "name": "What They Found",
+   "plain_question": "What did they find?",
+   "explain": "The matches children made between shapes, smells, names and feelings."
+  },
+  {
+   "key": "E",
+   "label": "Why kids answered",
+   "question": "Why did kids answer that way?",
+   "color": "#e4d6fb",
+   "style": "highlight",
+   "edge": "#6f45b8",
+   "name": "Why Kids Answered",
+   "plain_question": "Why did kids answer that way?",
+   "explain": "The reasons children gave for their choices, in their own words."
+  },
+  {
+   "key": "I",
+   "label": "So what",
+   "question": "So what? What can it be used for?",
+   "color": "#ffddaa",
+   "style": "highlight",
+   "edge": "#a85a00",
+   "name": "So What?",
+   "plain_question": "So what? What can it be used for?",
+   "explain": "Ideas for how this could be used, and lessons for future studies."
+  },
+  {
+   "key": "U",
+   "label": "Be cautious",
+   "question": "Should I be cautious?",
+   "color": "#b3121a",
+   "style": "underline",
+   "edge": "#b3121a",
+   "name": "Be Cautious",
+   "plain_question": "Should I be cautious?",
+   "explain": "Limits of the study: reasons not to over-trust the results."
+  }
+ ],
+ "page_prompts": {
+  "1": {
+   "new_section": false,
+   "prompt": "Abstract: pull out the gap, the study, the finding and the payoff.",
+   "stats_note": null
+  },
+  "2": {
+   "new_section": true,
+   "prompt": "Sections 1-2 (Introduction, Background): what is the puzzle, and what gap does this study fill?",
+   "stats_note": null
+  },
+  "3": {
+   "new_section": false,
+   "prompt": "Background: collect the terms and earlier findings you will need later to judge the results.",
+   "stats_note": null
+  },
+  "4": {
+   "new_section": false,
+   "prompt": "Background: why is this hard to study in 2-4-year-olds, and how did the authors adapt their method?",
+   "stats_note": null
+  },
+  "5": {
+   "new_section": true,
+   "prompt": "Section 3 (Study): picture the setup. What did a child touch, smell and get asked?",
+   "stats_note": null
+  },
+  "6": {
+   "new_section": true,
+   "prompt": "Sections 3.4-4 (Procedure to Findings): how did a story keep small children engaged, and how were answers analysed?",
+   "stats_note": "Reading the stats: 'significant' means a pattern unlikely to be chance (here, p below .05). A standardised residual above +2 means kids picked that pairing more than chance predicts; below -2, less."
+  },
+  "7": {
+   "new_section": false,
+   "prompt": "Story script and first results: read the script as a child would hear it, then see what names kids gave.",
+   "stats_note": "Reading Table 2: cells above +2 (green) mean that pairing was chosen more than chance predicts; below -2 (red), less."
+  },
+  "8": {
+   "new_section": false,
+   "prompt": "Findings: which pairings held up statistically, and which did not?",
+   "stats_note": "Reading Table 3 and Figure 6: green cells = chosen more than chance (above +2); red = less (below -2). p below .05 = unlikely to be chance."
+  },
+  "9": {
+   "new_section": true,
+   "prompt": "Sections 4.2-5 (Strategies, Discussion): what reasons did kids give, and where did they differ from adults?",
+   "stats_note": "Reading Table 4: same colour code as before. Green = chosen more than chance, red = chosen less."
+  },
+  "10": {
+   "new_section": false,
+   "prompt": "Discussion: what do these patterns say about how preschoolers make sense of the senses?",
+   "stats_note": null
+  },
+  "11": {
+   "new_section": false,
+   "prompt": "Discussion: what can researchers and designers take from this?",
+   "stats_note": null
+  },
+  "12": {
+   "new_section": true,
+   "prompt": "Sections 5.5-6 (Limitations, Conclusion): what should make you cautious about these findings?",
+   "stats_note": null
+  }
+ },
+ "passages": [
+  {
+   "id": "p1-001",
+   "page": 1,
+   "category": "G",
+   "kind": "text",
+   "text": "correspondence: the systematic ways in which perceptions in different sensory modalities influence one another.",
+   "rects": [
+    [
+     0.5186,
+     0.7041,
+     0.9155,
+     0.7164
+    ],
+    [
+     0.5186,
+     0.7179,
+     0.7866,
+     0.7303
+    ]
+   ]
+  },
+  {
+   "id": "p1-002",
+   "page": 1,
+   "category": "B",
+   "kind": "text",
+   "text": "Despite its relevance, little is known about cross-sensory correspondences in preschool-aged children (2-4 years).",
+   "rects": [
+    [
+     0.7883,
+     0.7179,
+     0.9147,
+     0.7303
+    ],
+    [
+     0.5186,
+     0.7318,
+     0.9155,
+     0.7441
+    ],
+    [
+     0.5186,
+     0.7456,
+     0.6696,
+     0.758
+    ]
+   ]
+  },
+  {
+   "id": "p1-003",
+   "page": 1,
+   "category": "S",
+   "kind": "text",
+   "text": "We present a study with 26 preschoolers examining smell-touch-emotion correspondences through playful tasks.",
+   "rects": [
+    [
+     0.6713,
+     0.7456,
+     0.9131,
+     0.758
+    ],
+    [
+     0.5186,
+     0.7595,
+     0.9131,
+     0.7718
+    ],
+    [
+     0.5186,
+     0.7733,
+     0.5533,
+     0.7856
+    ]
+   ]
+  },
+  {
+   "id": "p1-004",
+   "page": 1,
+   "category": "R",
+   "kind": "text",
+   "text": "We found significant correspondences both between sensory modalities and between sensory modalities and affective judgements.",
+   "rects": [
+    [
+     0.555,
+     0.7733,
+     0.9134,
+     0.7856
+    ],
+    [
+     0.5186,
+     0.7871,
+     0.9155,
+     0.7995
+    ],
+    [
+     0.5186,
+     0.801,
+     0.5609,
+     0.8133
+    ]
+   ]
+  },
+  {
+   "id": "p1-005",
+   "page": 1,
+   "category": "E",
+   "kind": "text",
+   "text": "Further analysis revealed association strategies underpinning these mappings.",
+   "rects": [
+    [
+     0.5626,
+     0.801,
+     0.9155,
+     0.8133
+    ],
+    [
+     0.5186,
+     0.8148,
+     0.6487,
+     0.8271
+    ]
+   ]
+  },
+  {
+   "id": "p1-006",
+   "page": 1,
+   "category": "I",
+   "kind": "text",
+   "text": "design guidelines that align with how preschoolers relate sensory input, and a replicable method for probing cross-sensory cognition in this age group.",
+   "rects": [
+    [
+     0.7827,
+     0.8286,
+     0.9131,
+     0.841
+    ],
+    [
+     0.5186,
+     0.8425,
+     0.9131,
+     0.8548
+    ],
+    [
+     0.5186,
+     0.8563,
+     0.8914,
+     0.8687
+    ]
+   ]
+  },
+  {
+   "id": "p2-007",
+   "page": 2,
+   "category": "G",
+   "kind": "text",
+   "text": "cross-sensory correspondences: stable and non-arbitrary mappings between features across senses.",
+   "rects": [
+    [
+     0.2877,
+     0.5569,
+     0.4832,
+     0.5692
+    ],
+    [
+     0.0869,
+     0.5707,
+     0.4837,
+     0.583
+    ]
+   ]
+  },
+  {
+   "id": "p2-008",
+   "page": 2,
+   "category": "B",
+   "kind": "text",
+   "text": "correspondences involving olfaction and emotion have been largely unexamined.",
+   "rects": [
+    [
+     0.379,
+     0.6814,
+     0.4814,
+     0.6937
+    ],
+    [
+     0.0869,
+     0.6952,
+     0.4837,
+     0.7076
+    ]
+   ]
+  },
+  {
+   "id": "p2-009",
+   "page": 2,
+   "category": "G",
+   "kind": "text",
+   "text": "We use the phrase Cross-sensory interaction to refer to design practices that intentionally leverage systematic correspondences between sensory modalities,",
+   "rects": [
+    [
+     0.4457,
+     0.8453,
+     0.4814,
+     0.8551
+    ],
+    [
+     0.0869,
+     0.8553,
+     0.4817,
+     0.8652
+    ],
+    [
+     0.0869,
+     0.8654,
+     0.3901,
+     0.8752
+    ]
+   ]
+  },
+  {
+   "id": "p2-010",
+   "page": 2,
+   "category": "S",
+   "kind": "text",
+   "text": "we conducted a study with 26 preschool children (ages 2-4), combining playful methods with narrated tasks",
+   "rects": [
+    [
+     0.6618,
+     0.1091,
+     0.9131,
+     0.1214
+    ],
+    [
+     0.5186,
+     0.1229,
+     0.9131,
+     0.1352
+    ]
+   ]
+  },
+  {
+   "id": "p2-011",
+   "page": 2,
+   "category": "R",
+   "kind": "text",
+   "text": "a spiky 3D stimulus was most strongly associated with a lemon scent and the label “Kiki”, while the rounded 3D stimulus was associated with a vanilla scent and labelled “Bouba”. Lemon was associated with excitement, and vanilla with calm, while a neutral cylinder shape was most strongly associated with air.",
+   "rects": [
+    [
+     0.5931,
+     0.1782,
+     0.9131,
+     0.1906
+    ],
+    [
+     0.5186,
+     0.1921,
+     0.9131,
+     0.2044
+    ],
+    [
+     0.518,
+     0.2059,
+     0.9131,
+     0.2182
+    ],
+    [
+     0.5186,
+     0.2198,
+     0.9131,
+     0.2321
+    ],
+    [
+     0.5186,
+     0.2336,
+     0.8251,
+     0.2459
+    ]
+   ]
+  },
+  {
+   "id": "p2-012",
+   "page": 2,
+   "category": "I",
+   "kind": "text",
+   "text": "We conclude that researchers should adopt a more systematic approach to sensory stimuli: addressing a standardised set of sensory stimuli and drawing on cross-sensory correspondences as a principled foundation for supporting emotion communication with children.",
+   "rects": [
+    [
+     0.5348,
+     0.2751,
+     0.9131,
+     0.2874
+    ],
+    [
+     0.5186,
+     0.2889,
+     0.9155,
+     0.3013
+    ],
+    [
+     0.5186,
+     0.3028,
+     0.9131,
+     0.3151
+    ],
+    [
+     0.5186,
+     0.3166,
+     0.9131,
+     0.3289
+    ],
+    [
+     0.5186,
+     0.3304,
+     0.5725,
+     0.3428
+    ]
+   ]
+  },
+  {
+   "id": "p3-013",
+   "page": 3,
+   "category": "G",
+   "kind": "text",
+   "text": "A well-studied example is the visual-linguistic cross-sensory correspondence known as the Bouba–Kiki effect, in which 2D angular shapes are reliably associated with the word “Kiki” and rounded shapes with the word “Bouba”",
+   "rects": [
+    [
+     0.437,
+     0.3779,
+     0.4839,
+     0.3902
+    ],
+    [
+     0.0869,
+     0.3917,
+     0.4839,
+     0.404
+    ],
+    [
+     0.0869,
+     0.4055,
+     0.4814,
+     0.4179
+    ],
+    [
+     0.0869,
+     0.4194,
+     0.4814,
+     0.4317
+    ],
+    [
+     0.0864,
+     0.4332,
+     0.2229,
+     0.4455
+    ]
+   ]
+  },
+  {
+   "id": "p3-014",
+   "page": 3,
+   "category": "G",
+   "kind": "text",
+   "text": "This phenomenon is robust across cultures and languages emerging, developmentally, with language use: preschoolers as young as 2.5 years showing the effect, while prelexical infants do not",
+   "rects": [
+    [
+     0.2552,
+     0.4332,
+     0.4839,
+     0.4455
+    ],
+    [
+     0.0869,
+     0.447,
+     0.4814,
+     0.4594
+    ],
+    [
+     0.0869,
+     0.4609,
+     0.4831,
+     0.4732
+    ],
+    [
+     0.0864,
+     0.4747,
+     0.2684,
+     0.487
+    ]
+   ]
+  },
+  {
+   "id": "p3-015",
+   "page": 3,
+   "category": "G",
+   "kind": "text",
+   "text": "Across these studies, a small set of stimuli recur, particularly rounded versus angular shapes and scents such as lemon and vanilla.",
+   "rects": [
+    [
+     0.1199,
+     0.7732,
+     0.4839,
+     0.7856
+    ],
+    [
+     0.0869,
+     0.7871,
+     0.4814,
+     0.7994
+    ],
+    [
+     0.0866,
+     0.8009,
+     0.1329,
+     0.8132
+    ]
+   ]
+  },
+  {
+   "id": "p3-016",
+   "page": 3,
+   "category": "B",
+   "kind": "text",
+   "text": "In particular, little is known about how correspondences involving olfaction, touch, and emotion emerge during early childhood preschool years",
+   "rects": [
+    [
+     0.3739,
+     0.8563,
+     0.4814,
+     0.8686
+    ],
+    [
+     0.0869,
+     0.8701,
+     0.4831,
+     0.8824
+    ],
+    [
+     0.0869,
+     0.8839,
+     0.4554,
+     0.8963
+    ]
+   ]
+  },
+  {
+   "id": "p3-017",
+   "page": 3,
+   "category": "G",
+   "kind": "text",
+   "text": "association strategies as a way to characterise how people explain, justify, and communicate the cross-sensory connections they make",
+   "rects": [
+    [
+     0.5186,
+     0.1723,
+     0.9147,
+     0.1846
+    ],
+    [
+     0.5186,
+     0.1861,
+     0.9131,
+     0.1984
+    ]
+   ]
+  },
+  {
+   "id": "p3-018",
+   "page": 3,
+   "category": "G",
+   "kind": "text",
+   "text": "Studies with children aged 8–11 found that they most often relied on Familiar Experience, drawing on objects or events from everyday life. In contrast, young adults and older adults employed a wider variety of strategies",
+   "rects": [
+    [
+     0.8822,
+     0.3798,
+     0.9156,
+     0.3922
+    ],
+    [
+     0.5186,
+     0.3937,
+     0.9131,
+     0.406
+    ],
+    [
+     0.5186,
+     0.4075,
+     0.9135,
+     0.4198
+    ],
+    [
+     0.5186,
+     0.4213,
+     0.9133,
+     0.4337
+    ],
+    [
+     0.5182,
+     0.4352,
+     0.6357,
+     0.4475
+    ]
+   ]
+  },
+  {
+   "id": "p4-019",
+   "page": 4,
+   "category": "G",
+   "kind": "table",
+   "text": "Table 1 strategy names: Embodied Action, Grasping for Another Sense, Personal Connection, Sensory Features, Valence, Vocalisation, Familiar Experience",
+   "rects": [
+    [
+     0.1579,
+     0.1241,
+     0.2522,
+     0.1352
+    ],
+    [
+     0.1579,
+     0.1397,
+     0.2759,
+     0.1508
+    ],
+    [
+     0.1579,
+     0.1523,
+     0.1899,
+     0.1634
+    ],
+    [
+     0.1579,
+     0.1679,
+     0.2707,
+     0.179
+    ],
+    [
+     0.1579,
+     0.1961,
+     0.2504,
+     0.2071
+    ],
+    [
+     0.1579,
+     0.2242,
+     0.2012,
+     0.2353
+    ],
+    [
+     0.1579,
+     0.2524,
+     0.2247,
+     0.2635
+    ],
+    [
+     0.1579,
+     0.2806,
+     0.2659,
+     0.2917
+    ]
+   ]
+  },
+  {
+   "id": "p4-020",
+   "page": 4,
+   "category": "G",
+   "kind": "text",
+   "text": "yet children, particularly preschoolers, often find emotions difficult to articulate verbally,",
+   "rects": [
+    [
+     0.0869,
+     0.3928,
+     0.4814,
+     0.4052
+    ],
+    [
+     0.0869,
+     0.4067,
+     0.221,
+     0.419
+    ]
+   ]
+  },
+  {
+   "id": "p4-021",
+   "page": 4,
+   "category": "B",
+   "kind": "text",
+   "text": "we currently lack an understanding of how preschoolers form associations between tactile and olfactory features, or connect them to emotions.",
+   "rects": [
+    [
+     0.311,
+     0.6142,
+     0.4839,
+     0.6266
+    ],
+    [
+     0.0869,
+     0.6281,
+     0.4814,
+     0.6404
+    ],
+    [
+     0.0869,
+     0.6419,
+     0.3771,
+     0.6542
+    ]
+   ]
+  },
+  {
+   "id": "p4-022",
+   "page": 4,
+   "category": "S",
+   "kind": "text",
+   "text": "our study combines multiple strategies into a method that is developmentally appropriate yet capable of capturing meaningful cross-sensory data. We introduce abstract concepts through storytelling, use a teacher as a co-participant to provide reassurance and scaffolding, and adapt the SAM framework into a simpler binary choice format.",
+   "rects": [
+    [
+     0.7462,
+     0.6696,
+     0.9155,
+     0.6819
+    ],
+    [
+     0.5186,
+     0.6834,
+     0.9131,
+     0.6957
+    ],
+    [
+     0.5186,
+     0.6972,
+     0.9155,
+     0.7096
+    ],
+    [
+     0.5186,
+     0.7111,
+     0.9131,
+     0.7234
+    ],
+    [
+     0.5186,
+     0.7249,
+     0.9131,
+     0.7373
+    ],
+    [
+     0.5186,
+     0.7388,
+     0.8539,
+     0.7511
+    ]
+   ]
+  },
+  {
+   "id": "p5-023",
+   "page": 5,
+   "category": "B",
+   "kind": "text",
+   "text": "Our study addresses two research questions. First: what are the cross-sensory correspondences that children aged 2–4 form between smell, touch, and emotion? Second: What strategies do children aged 2-4 use to create connections between smell, touch, and emotion?",
+   "rects": [
+    [
+     0.0869,
+     0.1264,
+     0.4814,
+     0.1387
+    ],
+    [
+     0.0869,
+     0.1402,
+     0.4839,
+     0.1525
+    ],
+    [
+     0.0869,
+     0.154,
+     0.4839,
+     0.1664
+    ],
+    [
+     0.0869,
+     0.1679,
+     0.4814,
+     0.1802
+    ],
+    [
+     0.0869,
+     0.1817,
+     0.1444,
+     0.194
+    ]
+   ]
+  },
+  {
+   "id": "p5-024",
+   "page": 5,
+   "category": "S",
+   "kind": "text",
+   "text": "A total of 26 children (16 females, 10 males) between the ages of 2 years and 4.5 years old",
+   "rects": [
+    [
+     0.0864,
+     0.282,
+     0.4814,
+     0.2943
+    ],
+    [
+     0.0869,
+     0.2959,
+     0.2232,
+     0.3082
+    ]
+   ]
+  },
+  {
+   "id": "p5-025",
+   "page": 5,
+   "category": "S",
+   "kind": "text",
+   "text": "We presented tactile stimuli to the children using a specially designed wooden box.",
+   "rects": [
+    [
+     0.0862,
+     0.4654,
+     0.4839,
+     0.4777
+    ],
+    [
+     0.0869,
+     0.4792,
+     0.2103,
+     0.4915
+    ]
+   ]
+  },
+  {
+   "id": "p5-026",
+   "page": 5,
+   "category": "S",
+   "kind": "text",
+   "text": "we selected lemon, vanilla, and air,",
+   "rects": [
+    [
+     0.3186,
+     0.7456,
+     0.4831,
+     0.7579
+    ],
+    [
+     0.0869,
+     0.7594,
+     0.1331,
+     0.7717
+    ]
+   ]
+  },
+  {
+   "id": "p5-027",
+   "page": 5,
+   "category": "S",
+   "kind": "text",
+   "text": "The emotional categories were ‘excited’, ‘calm’, and ‘neither’.",
+   "rects": [
+    [
+     0.4558,
+     0.7732,
+     0.4814,
+     0.7856
+    ],
+    [
+     0.0869,
+     0.7871,
+     0.4293,
+     0.7994
+    ]
+   ]
+  },
+  {
+   "id": "p5-028",
+   "page": 5,
+   "category": "G",
+   "kind": "text",
+   "text": "Prior research in children aged 11-14 has found that excitement and calm are associated with angular and rounded objects and lemon and vanilla scents, respectively.",
+   "rects": [
+    [
+     0.4309,
+     0.7871,
+     0.4839,
+     0.7994
+    ],
+    [
+     0.0869,
+     0.8009,
+     0.4814,
+     0.8132
+    ],
+    [
+     0.0869,
+     0.8147,
+     0.4814,
+     0.8271
+    ],
+    [
+     0.0866,
+     0.8286,
+     0.2472,
+     0.8409
+    ]
+   ]
+  },
+  {
+   "id": "p5-029",
+   "page": 5,
+   "category": "S",
+   "kind": "text",
+   "text": "we chose a spiky shape, a round shape and a cylinder.",
+   "rects": [
+    [
+     0.3808,
+     0.8286,
+     0.4818,
+     0.8409
+    ],
+    [
+     0.0869,
+     0.8424,
+     0.3065,
+     0.8547
+    ]
+   ]
+  },
+  {
+   "id": "p6-030",
+   "page": 6,
+   "category": "S",
+   "kind": "text",
+   "text": "we chose to present the shapes as anthropomorphic characters, since children respond well to this",
+   "rects": [
+    [
+     0.4047,
+     0.4827,
+     0.4814,
+     0.495
+    ],
+    [
+     0.0869,
+     0.4965,
+     0.4814,
+     0.5088
+    ],
+    [
+     0.0869,
+     0.5103,
+     0.2107,
+     0.5227
+    ]
+   ]
+  },
+  {
+   "id": "p6-031",
+   "page": 6,
+   "category": "S",
+   "kind": "text",
+   "text": "We ultimately chose to represent emotions as places where the shapes might live.",
+   "rects": [
+    [
+     0.224,
+     0.6072,
+     0.4814,
+     0.6195
+    ],
+    [
+     0.0869,
+     0.621,
+     0.3223,
+     0.6334
+    ]
+   ]
+  },
+  {
+   "id": "p6-032",
+   "page": 6,
+   "category": "S",
+   "kind": "text",
+   "text": "To introduce scents, we imagined washing hands with soap.",
+   "rects": [
+    [
+     0.464,
+     0.6764,
+     0.4814,
+     0.6887
+    ],
+    [
+     0.0869,
+     0.6902,
+     0.4279,
+     0.7025
+    ]
+   ]
+  },
+  {
+   "id": "p6-033",
+   "page": 6,
+   "category": "S",
+   "kind": "text",
+   "text": "The story involved four tasks: first, they named the tactile stimuli, choosing either “Bouba”, “Kiki” or “neither” with the option to give another name if “Bouba” or “Kiki” did not fit. They were then asked, in a randomised order, to smell three different scents and assign them to three tactile stimuli, assign three different emotions to the three tactile stimuli, and finally assign three different emotions to the three olfactory stimuli.",
+   "rects": [
+    [
+     0.1032,
+     0.7594,
+     0.4839,
+     0.7717
+    ],
+    [
+     0.0869,
+     0.7732,
+     0.4814,
+     0.7856
+    ],
+    [
+     0.0869,
+     0.7871,
+     0.4814,
+     0.7994
+    ],
+    [
+     0.0869,
+     0.8009,
+     0.4839,
+     0.8132
+    ],
+    [
+     0.0869,
+     0.8147,
+     0.4814,
+     0.8271
+    ],
+    [
+     0.0869,
+     0.8286,
+     0.4814,
+     0.8409
+    ],
+    [
+     0.0869,
+     0.8424,
+     0.259,
+     0.8547
+    ]
+   ]
+  },
+  {
+   "id": "p6-034",
+   "page": 6,
+   "category": "U",
+   "kind": "text",
+   "text": "Not every child explained their reasoning (n = 3 tactile, n = 8 olfactory).",
+   "rects": [
+    [
+     0.7199,
+     0.3966,
+     0.9133,
+     0.409
+    ],
+    [
+     0.5186,
+     0.4105,
+     0.7652,
+     0.4228
+    ]
+   ]
+  },
+  {
+   "id": "p6-035",
+   "page": 6,
+   "category": "R",
+   "kind": "text",
+   "text": "these results were driven by strong associations between “Kiki” and Spiky, “Bouba” and Round, and a negative association between “Bouba” and Spiky",
+   "rects": [
+    [
+     0.545,
+     0.8563,
+     0.9147,
+     0.8686
+    ],
+    [
+     0.5186,
+     0.8701,
+     0.9131,
+     0.8824
+    ],
+    [
+     0.5169,
+     0.8839,
+     0.6293,
+     0.8963
+    ]
+   ]
+  },
+  {
+   "id": "p7-036",
+   "page": 7,
+   "category": "S",
+   "kind": "text",
+   "text": "Story for Participants aged 2–4",
+   "rects": [
+    [
+     0.182,
+     0.1126,
+     0.3879,
+     0.1249
+    ]
+   ]
+  },
+  {
+   "id": "p7-037",
+   "page": 7,
+   "category": "R",
+   "kind": "text",
+   "text": "Common “other” names for the Spiky stimulus included “Spiky”or “Spike” (11.5%) “Star” (11.1%) and “Spitfire” (5.6%). For the Round stimulus: “Grapes” (11.8%), “Flower” (11.8%) “Bubble” (5.9%) and “Ball” (5.9%), and for the Cylinder stimulus “Circle” (18.8%), “Candle” (6.3%) and “Marshmallow”(6.3%).",
+   "rects": [
+    [
+     0.5759,
+     0.81,
+     0.9131,
+     0.8224
+    ],
+    [
+     0.5169,
+     0.8238,
+     0.9131,
+     0.8362
+    ],
+    [
+     0.5186,
+     0.8377,
+     0.914,
+     0.85
+    ],
+    [
+     0.5186,
+     0.8515,
+     0.9147,
+     0.8639
+    ],
+    [
+     0.5169,
+     0.8653,
+     0.7708,
+     0.8777
+    ]
+   ]
+  },
+  {
+   "id": "p8-038",
+   "page": 8,
+   "category": "R",
+   "kind": "text",
+   "text": "Figure 6: Four bar charts showing the four different associations we researched. We found statistical significance in tactile-linguistic, olfaction-emotion and tactile-olfactory. We did not find statistical significance in tactile-emotion",
+   "rects": [
+    [
+     0.1281,
+     0.6427,
+     0.8719,
+     0.6551
+    ],
+    [
+     0.1281,
+     0.6566,
+     0.8719,
+     0.6689
+    ]
+   ]
+  },
+  {
+   "id": "p8-039",
+   "page": 8,
+   "category": "R",
+   "kind": "text",
+   "text": "indicated no significant association between shape,",
+   "rects": [
+    [
+     0.1236,
+     0.696,
+     0.4206,
+     0.7083
+    ]
+   ]
+  },
+  {
+   "id": "p8-040",
+   "page": 8,
+   "category": "R",
+   "kind": "text",
+   "text": "strong positive associations between vanilla and calm, lemon and excited, and negative association between lemon and calm, and vanilla and excited",
+   "rects": [
+    [
+     0.4408,
+     0.7899,
+     0.4815,
+     0.8023
+    ],
+    [
+     0.0869,
+     0.8038,
+     0.4831,
+     0.8161
+    ],
+    [
+     0.0869,
+     0.8176,
+     0.4814,
+     0.8299
+    ],
+    [
+     0.0869,
+     0.8315,
+     0.1314,
+     0.8438
+    ]
+   ]
+  },
+  {
+   "id": "p8-041",
+   "page": 8,
+   "category": "R",
+   "kind": "text",
+   "text": "very strong positive associations between lemon and spiky, round and vanilla, and a strong association between cylinder and air, as well as strong negative associations between vanilla and spiky, and round and lemon",
+   "rects": [
+    [
+     0.79,
+     0.8424,
+     0.9131,
+     0.8547
+    ],
+    [
+     0.5186,
+     0.8563,
+     0.9131,
+     0.8686
+    ],
+    [
+     0.5186,
+     0.8701,
+     0.9155,
+     0.8824
+    ],
+    [
+     0.5186,
+     0.8839,
+     0.9131,
+     0.8963
+    ]
+   ]
+  },
+  {
+   "id": "p9-042",
+   "page": 9,
+   "category": "E",
+   "kind": "text",
+   "text": "Interestingly, the word “friend” (n = 9) emerged primarily in relation to emotional associations; for example, one participant (P4) explained that the Round stimulus elicited excitement because “they have friends” whereas the Spiky stimulus elicited calm because “they have no friends”.",
+   "rects": [
+    [
+     0.1455,
+     0.538,
+     0.4818,
+     0.5503
+    ],
+    [
+     0.0869,
+     0.5518,
+     0.4814,
+     0.5642
+    ],
+    [
+     0.0865,
+     0.5657,
+     0.4815,
+     0.578
+    ],
+    [
+     0.0853,
+     0.5795,
+     0.4814,
+     0.5918
+    ],
+    [
+     0.0853,
+     0.5933,
+     0.2234,
+     0.6057
+    ]
+   ]
+  },
+  {
+   "id": "p9-043",
+   "page": 9,
+   "category": "R",
+   "kind": "text",
+   "text": "we observed a clear “Bouba–Kiki” effect: children reliably matched the Spiky stimulus with “Kiki” and the Round stimulus with “Bouba”,",
+   "rects": [
+    [
+     0.5961,
+     0.2877,
+     0.9155,
+     0.3
+    ],
+    [
+     0.5186,
+     0.3015,
+     0.9131,
+     0.3139
+    ],
+    [
+     0.518,
+     0.3154,
+     0.6047,
+     0.3277
+    ]
+   ]
+  },
+  {
+   "id": "p9-044",
+   "page": 9,
+   "category": "G",
+   "kind": "text",
+   "text": "Whereas adults and older children typically associate spikiness with high arousal and roundness with calm,",
+   "rects": [
+    [
+     0.7343,
+     0.5921,
+     0.9155,
+     0.6044
+    ],
+    [
+     0.5186,
+     0.6059,
+     0.9131,
+     0.6183
+    ],
+    [
+     0.518,
+     0.6198,
+     0.5842,
+     0.6321
+    ]
+   ]
+  },
+  {
+   "id": "p9-045",
+   "page": 9,
+   "category": "R",
+   "kind": "text",
+   "text": "preschoolers sometimes described the Spiky shape as calm and the Round shape as excited.",
+   "rects": [
+    [
+     0.5862,
+     0.6198,
+     0.9131,
+     0.6321
+    ],
+    [
+     0.5186,
+     0.6336,
+     0.7436,
+     0.646
+    ]
+   ]
+  },
+  {
+   "id": "p9-046",
+   "page": 9,
+   "category": "R",
+   "kind": "text",
+   "text": "For olfactory-emotion associations, children showed clear and statistically significant correspondences, linking vanilla with calm and lemon with excited.",
+   "rects": [
+    [
+     0.5348,
+     0.7581,
+     0.9131,
+     0.7705
+    ],
+    [
+     0.5186,
+     0.772,
+     0.9131,
+     0.7843
+    ],
+    [
+     0.5186,
+     0.7858,
+     0.6694,
+     0.7981
+    ]
+   ]
+  },
+  {
+   "id": "p9-047",
+   "page": 9,
+   "category": "R",
+   "kind": "text",
+   "text": "Finally, tactile-olfactory mappings also showed significance, with Spiky paired with lemon and Round with vanilla.",
+   "rects": [
+    [
+     0.8686,
+     0.855,
+     0.9147,
+     0.8673
+    ],
+    [
+     0.5186,
+     0.8688,
+     0.9131,
+     0.8812
+    ],
+    [
+     0.5186,
+     0.8827,
+     0.7802,
+     0.895
+    ]
+   ]
+  },
+  {
+   "id": "p9-048",
+   "page": 9,
+   "category": "E",
+   "kind": "text",
+   "text": "However, many preschoolers struggled to articulate",
+   "rects": [
+    [
+     0.6043,
+     0.8965,
+     0.9131,
+     0.9088
+    ]
+   ]
+  },
+  {
+   "id": "p10-049",
+   "page": 10,
+   "category": "E",
+   "kind": "text",
+   "text": "explicit reasoning for these choices, indicating that while such correspondences may already operate intuitively, they are not yet consciously accessible or easily verbalised.",
+   "rects": [
+    [
+     0.0869,
+     0.4655,
+     0.4814,
+     0.4778
+    ],
+    [
+     0.0869,
+     0.4794,
+     0.4814,
+     0.4917
+    ],
+    [
+     0.0869,
+     0.4932,
+     0.3433,
+     0.5055
+    ]
+   ]
+  },
+  {
+   "id": "p10-050",
+   "page": 10,
+   "category": "R",
+   "kind": "text",
+   "text": "Our data suggested this was the case in all tasks other than the tactile-emotion task:",
+   "rects": [
+    [
+     0.1294,
+     0.6177,
+     0.4815,
+     0.6301
+    ],
+    [
+     0.0869,
+     0.6316,
+     0.2306,
+     0.6439
+    ]
+   ]
+  },
+  {
+   "id": "p10-051",
+   "page": 10,
+   "category": "R",
+   "kind": "text",
+   "text": "Taken together, these findings suggest that some correspondences (e.g., tactile-linguistic, olfactory-emotion, tactile-olfactory) may appear early and remain stable across development, while others (e.g., tactile-emotion) may still be in development and grounded in social imagination at this age, only later aligning with adult patterns.",
+   "rects": [
+    [
+     0.3503,
+     0.6592,
+     0.4814,
+     0.6716
+    ],
+    [
+     0.0869,
+     0.6731,
+     0.4831,
+     0.6854
+    ],
+    [
+     0.0869,
+     0.6869,
+     0.4814,
+     0.6992
+    ],
+    [
+     0.0869,
+     0.7007,
+     0.4818,
+     0.7131
+    ],
+    [
+     0.0869,
+     0.7146,
+     0.4814,
+     0.7269
+    ],
+    [
+     0.0869,
+     0.7284,
+     0.3512,
+     0.7407
+    ]
+   ]
+  },
+  {
+   "id": "p10-052",
+   "page": 10,
+   "category": "E",
+   "kind": "text",
+   "text": "Across both tactile and olfactory tasks, the Familiar Experience strategy was most common. Children frequently grounded their associations in everyday objects, e.g. calling the Round shape a “grape”.",
+   "rects": [
+    [
+     0.5348,
+     0.4655,
+     0.9131,
+     0.4779
+    ],
+    [
+     0.5186,
+     0.4794,
+     0.9133,
+     0.4917
+    ],
+    [
+     0.5186,
+     0.4932,
+     0.9131,
+     0.5055
+    ],
+    [
+     0.5169,
+     0.507,
+     0.5649,
+     0.5194
+    ]
+   ]
+  },
+  {
+   "id": "p10-053",
+   "page": 10,
+   "category": "E",
+   "kind": "text",
+   "text": "When explaining their associations with Vanilla, children often invoked positive valences. For example, when asked why vanilla felt calm, one child responded “I love it”.",
+   "rects": [
+    [
+     0.5179,
+     0.6039,
+     0.9131,
+     0.6162
+    ],
+    [
+     0.5186,
+     0.6177,
+     0.9131,
+     0.6301
+    ],
+    [
+     0.5186,
+     0.6316,
+     0.7778,
+     0.6439
+    ]
+   ]
+  },
+  {
+   "id": "p10-054",
+   "page": 10,
+   "category": "E",
+   "kind": "text",
+   "text": "Notably, no children explained their olfactory associations in terms of Sensory Features. One possible explanation is linguistic: the English language offers a limited vocabulary for describing smells compared to other senses, making valence-based reasoning more accessible than feature-based description.",
+   "rects": [
+    [
+     0.5494,
+     0.6731,
+     0.9131,
+     0.6854
+    ],
+    [
+     0.5186,
+     0.6869,
+     0.9131,
+     0.6993
+    ],
+    [
+     0.5186,
+     0.7007,
+     0.9131,
+     0.7131
+    ],
+    [
+     0.5186,
+     0.7146,
+     0.9131,
+     0.7269
+    ],
+    [
+     0.5186,
+     0.7284,
+     0.8028,
+     0.7407
+    ]
+   ]
+  },
+  {
+   "id": "p11-055",
+   "page": 11,
+   "category": "E",
+   "kind": "text",
+   "text": "Unlike adults, who may rely on abstract conventions, young children root their reasoning in what they can touch, see, or feel emotionally in the specific moment of interaction",
+   "rects": [
+    [
+     0.4003,
+     0.1091,
+     0.4831,
+     0.1214
+    ],
+    [
+     0.0864,
+     0.1229,
+     0.4839,
+     0.1352
+    ],
+    [
+     0.0869,
+     0.1367,
+     0.4814,
+     0.1491
+    ],
+    [
+     0.0869,
+     0.1506,
+     0.2207,
+     0.1629
+    ]
+   ]
+  },
+  {
+   "id": "p11-056",
+   "page": 11,
+   "category": "I",
+   "kind": "text",
+   "text": "we developed and trialled a replicable method tailored to 2-4-year-olds.",
+   "rects": [
+    [
+     0.2071,
+     0.3304,
+     0.4814,
+     0.3428
+    ],
+    [
+     0.0869,
+     0.3443,
+     0.2415,
+     0.3566
+    ]
+   ]
+  },
+  {
+   "id": "p11-057",
+   "page": 11,
+   "category": "U",
+   "kind": "text",
+   "text": "While we did not formally evaluate the impact of this choice on engagement and compliance,",
+   "rects": [
+    [
+     0.1304,
+     0.538,
+     0.4814,
+     0.5503
+    ],
+    [
+     0.0869,
+     0.5518,
+     0.2844,
+     0.5642
+    ]
+   ]
+  },
+  {
+   "id": "p11-058",
+   "page": 11,
+   "category": "U",
+   "kind": "text",
+   "text": "Because our experimental process required children to produce verbal responses, non-verbal preschoolers were excluded.",
+   "rects": [
+    [
+     0.0869,
+     0.7594,
+     0.4814,
+     0.7717
+    ],
+    [
+     0.0866,
+     0.7732,
+     0.4379,
+     0.7856
+    ]
+   ]
+  },
+  {
+   "id": "p11-059",
+   "page": 11,
+   "category": "I",
+   "kind": "text",
+   "text": "For preschoolers, interactions can be made effective by grounding them in Familiar Experiences and in sensory qualities that are clear, exaggerated, and easy to perceive.",
+   "rects": [
+    [
+     0.8103,
+     0.3166,
+     0.9147,
+     0.3289
+    ],
+    [
+     0.5186,
+     0.3304,
+     0.9131,
+     0.3428
+    ],
+    [
+     0.5186,
+     0.3443,
+     0.9131,
+     0.3566
+    ],
+    [
+     0.5186,
+     0.3581,
+     0.6168,
+     0.3704
+    ]
+   ]
+  },
+  {
+   "id": "p11-060",
+   "page": 11,
+   "category": "I",
+   "kind": "text",
+   "text": "using lemon, or more broadly citrus scents with preschoolers in a calm context, or to signal a calm character may therefore create confusion.",
+   "rects": [
+    [
+     0.5445,
+     0.4965,
+     0.9131,
+     0.5088
+    ],
+    [
+     0.5186,
+     0.5103,
+     0.9156,
+     0.5227
+    ],
+    [
+     0.5186,
+     0.5242,
+     0.6048,
+     0.5365
+    ]
+   ]
+  },
+  {
+   "id": "p11-061",
+   "page": 11,
+   "category": "I",
+   "kind": "text",
+   "text": "the stable mappings between emotion–olfaction, olfaction–tactile, and tactile–linguistic could be leveraged to create assistive tools that support children, particularly those with limited verbal abilities, communicate how they feel by choosing scents that correspond with their emotional states.",
+   "rects": [
+    [
+     0.6961,
+     0.6902,
+     0.9155,
+     0.7025
+    ],
+    [
+     0.5186,
+     0.704,
+     0.9131,
+     0.7164
+    ],
+    [
+     0.5186,
+     0.7179,
+     0.9155,
+     0.7302
+    ],
+    [
+     0.5186,
+     0.7317,
+     0.9135,
+     0.7441
+    ],
+    [
+     0.5186,
+     0.7456,
+     0.9153,
+     0.7579
+    ]
+   ]
+  },
+  {
+   "id": "p12-062",
+   "page": 12,
+   "category": "I",
+   "kind": "text",
+   "text": "This opens promising avenues for the design of inclusive technologies that extend beyond entertainment or education to support emotional well-being and social connection.",
+   "rects": [
+    [
+     0.2399,
+     0.1091,
+     0.4839,
+     0.1214
+    ],
+    [
+     0.0869,
+     0.1229,
+     0.4817,
+     0.1352
+    ],
+    [
+     0.0869,
+     0.1367,
+     0.4804,
+     0.1491
+    ]
+   ]
+  },
+  {
+   "id": "p12-063",
+   "page": 12,
+   "category": "U",
+   "kind": "text",
+   "text": "First, some children struggled to provide explicit reasons for their tactile and olfactory associations (n = 3 tactile, n = 8 olfactory).",
+   "rects": [
+    [
+     0.1305,
+     0.2082,
+     0.4814,
+     0.2205
+    ],
+    [
+     0.0869,
+     0.222,
+     0.4839,
+     0.2343
+    ],
+    [
+     0.0869,
+     0.2359,
+     0.1221,
+     0.2482
+    ]
+   ]
+  },
+  {
+   "id": "p12-064",
+   "page": 12,
+   "category": "U",
+   "kind": "text",
+   "text": "While the number of stimuli in our study was intentionally limited to reduce cognitive load and respect sample size constraints, this constrained the range of possible correspondences.",
+   "rects": [
+    [
+     0.1032,
+     0.3327,
+     0.4839,
+     0.345
+    ],
+    [
+     0.0869,
+     0.3465,
+     0.4831,
+     0.3589
+    ],
+    [
+     0.0869,
+     0.3604,
+     0.4288,
+     0.3727
+    ]
+   ]
+  },
+  {
+   "id": "p12-065",
+   "page": 12,
+   "category": "U",
+   "kind": "text",
+   "text": "categorising layered or overlapping responses simplified their expressions.",
+   "rects": [
+    [
+     0.137,
+     0.4849,
+     0.4814,
+     0.4973
+    ],
+    [
+     0.0869,
+     0.4988,
+     0.1926,
+     0.5111
+    ]
+   ]
+  }
+ ],
+ "notes": [
+  "Passage text is extracted from the PDF and cleaned (line-break hyphens joined, bracketed citations removed, \"=\" restored in \"n = 3\"). Spot-check against the PDF before publishing.",
+  "Reading order is approximate (page, then left column, then right column)."
+ ]
+}

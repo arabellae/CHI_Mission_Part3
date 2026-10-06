@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read the Paper | Touching Emotions, Smelling Shapes: A Reading Guide</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="vendor/pdfjs/pdf_viewer.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<main>
+  <h1 class="sr-only">Read the Paper</h1>
+  <noscript><p class="status err">This page needs JavaScript to show the paper. You can also download the PDFs from the Downloads and Credit page.</p></noscript>
+
+  <div class="rgrid" id="rgrid">
+    <div class="fs-left">
+    <div class="a-toolbar">
+      <div class="vc" id="toolbar" role="group" aria-label="Viewing controls">
+        <div class="g">
+          <div class="gh">Page</div>
+          <div class="pgbox"><input id="page-input" type="number" min="1" max="14" value="1" inputmode="numeric" aria-label="Page number"><span id="page-total">of 14</span></div>
+        </div>
+        <div class="g guide-only">
+          <div class="gh">Highlights
+            <span class="pill" id="hl-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h4l10.5-10.5a2.828 2.828 0 1 0-4-4L3 15v4"/><path d="M12.5 5.5l4 4"/><path d="M4.5 13.5l4 4"/><path d="M21 15v4h-8l4-4z"/></svg><b id="hl-n">0</b><span id="hl-t">on this page</span></span>
+          </div>
+          <div class="bgrp" role="group" aria-label="Move between highlights">
+            <button type="button" id="hl-prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Previous</button>
+            <button type="button" id="hl-next">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="g">
+          <div class="gh">Zoom</div>
+          <div class="bgrp" role="group" aria-label="Zoom">
+            <button type="button" id="zoom-out" aria-label="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+            <span id="zoom-label" aria-live="polite">100%</span>
+            <button type="button" id="zoom-in" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite">Loading the paper&hellip;</p>
+    </div>
+
+    <aside class="side a-look">
+      <div class="panel look" id="look" aria-label="Look for">
+        <h2>Look For</h2>
+        <button type="button" class="btn-sm panel-toggle" id="look-toggle" aria-expanded="true">Show or Hide</button>
+        <div class="panel-body guide-only">
+          <p id="strip">Loading&hellip;</p>
+          <p class="stats" id="stats" hidden></p>
+          <p class="how">This changes as you turn the page.</p>
+        </div>
+        <p class="how off-only">The guide is off. Turn it on in the key to see what to look for on each page.</p>
+      </div>
+    </aside>
+
+    <aside class="a-scrubv" aria-label="Pages">
+      <div class="scrub v" id="scrub-v" role="group" aria-label="Jump to a page"></div>
+    </aside>
+
+    </div>
+
+    <section class="center a-paper" aria-label="The paper">
+      <div class="pagerow">
+        <button type="button" class="arrow" id="prev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="reader" id="reader">
+          <div class="stage" id="stage">
+            <div class="sheet" id="sheet">
+              <canvas id="canvas" aria-label="Page of the paper"></canvas>
+              <div class="hl-layer" id="hl-layer"></div>
+              <div class="note-layer" id="note-layer"></div>
+              <div class="gl-layer" id="gl-layer"></div>
+              <div class="textLayer" id="text-layer"></div>
+              <div class="focus-layer" id="focus-layer"></div>
+              <div id="pin-layer" style="position:absolute;inset:0;pointer-events:none"></div>
+              <button type="button" class="fsbtn" id="fs-btn" aria-label="Full screen" aria-pressed="false" title="Full screen">
+                <svg class="grow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h4v4"/><path d="M14 10l6-6"/><path d="M8 20H4v-4"/><path d="M4 20l6-6"/><path d="M16 20h4v-4"/><path d="M14 14l6 6"/><path d="M8 4H4v4"/><path d="M4 4l6 6"/></svg>
+                <svg class="shrink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h4V5"/><path d="M3 3l6 6"/><path d="M5 15h4v4"/><path d="M3 21l6-6"/><path d="M19 9h-4V5"/><path d="M15 9l6-6"/><path d="M19 15h-4v4"/><path d="M15 15l6 6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="tip" id="tip" role="status"></div>
+          <div class="popover" id="popover"><button type="button" class="btn-sm" id="add-note">Add Note</button></div>
+        </div>
+        <button type="button" class="arrow" id="next" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="scrub" id="scrub" role="group" aria-label="Jump to a page"></div>
+      <p class="scrub-now" id="scrub-now" aria-hidden="true"></p>
+    </section>
+
+    <aside class="side a-key">
+      <button type="button" class="btn-sm key-fab" id="key-fab" aria-expanded="false" aria-controls="key">Key</button>
+      <div class="panel key" id="key" aria-label="Reading guide key">
+        <h2>Reading Guide Key</h2>
+        <div class="seg block" role="group" aria-label="Reading guide">
+          <button type="button" data-guide-set="on" aria-pressed="true">On</button>
+          <button type="button" data-guide-set="off" aria-pressed="false">Off</button>
+        </div>
+        <p class="state">Off shows the paper with nothing added.</p>
+        <div class="guide-only">
+          <div id="key-groups"></div>
+          <div id="key-custom"></div>
+        </div>
+        <details class="howto">
+          <summary>How to Use This Page</summary>
+          <ul>
+            <li>Turn the guide on or off with the switch above.</li>
+            <li>Hover over a color to see what it means. Press it to show only those highlights; press again to show all.</li>
+            <li>Select any words, then choose Add Note to save your own note, color and category.</li>
+            <li>Click a dotted-underline word for its meaning.</li>
+            <li>Use the arrow keys, the arrows beside the page, or the dots under it to turn pages.</li>
+            <li>Use the corner button on the page for full screen.</li>
+          </ul>
+        </details>
+        <p class="how fs-only">Press Esc to leave full screen.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="notes" id="notes-root" aria-label="Your notes"></section>
+</main>
+<script>
+/* Opening this file straight from disk cannot load the paper (browsers block it). Say so plainly. */
+if (location.protocol === "file:") {
+  var st = document.getElementById("status");
+  st.className = "status err";
+  st.textContent = "This page can't load the paper when opened as a file. Run start-site.bat (or python -m http.server 8000 in the site folder) and open http://localhost:8000/read.html instead.";
+}
+</script>
+<script src="js/site.js"></script>
+<script type="module" src="js/reader.js"></script>
+</body>
+</html>

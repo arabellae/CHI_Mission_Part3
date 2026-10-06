@@ -1,0 +1,1160 @@
+{
+ "terms": [
+  {
+   "id": "cross-sensory-correspondence",
+   "term": "Cross-Sensory Correspondence",
+   "definition": "A steady, non-random link between something in one sense and something in another, such as a spiky shape and a sharp-sounding word."
+  },
+  {
+   "id": "bouba-kiki-effect",
+   "term": "Bouba–Kiki Effect",
+   "definition": "The common finding that people link spiky shapes with the made-up word “kiki” and round shapes with “bouba.”"
+  },
+  {
+   "id": "olfaction",
+   "term": "Olfaction / Olfactory",
+   "definition": "The sense of smell."
+  },
+  {
+   "id": "tactile",
+   "term": "Tactile",
+   "definition": "Having to do with touch."
+  },
+  {
+   "id": "valence",
+   "term": "Valence",
+   "definition": "How good or bad something feels. In this paper, a child saying “I love it” is a valence reason."
+  },
+  {
+   "id": "arousal",
+   "term": "Arousal",
+   "definition": "How energized a feeling is, from calm to excited."
+  },
+  {
+   "id": "anthropomorphic",
+   "term": "Anthropomorphic",
+   "definition": "Given human traits. The shapes were treated as characters."
+  },
+  {
+   "id": "stimulus",
+   "term": "Stimulus (Plural: Stimuli)",
+   "definition": "Something presented to a participant to get a response, such as a shape or a scent."
+  },
+  {
+   "id": "association-strategy",
+   "term": "Association Strategy",
+   "definition": "The kind of reason a child gives for a match. The paper uses seven kinds: Embodied Action, Grasping for Another Sense, Personal Connection, Sensory Features, Valence, Vocalisation and Familiar Experience."
+  },
+  {
+   "id": "chi-square-test",
+   "term": "Chi-Square Test",
+   "definition": "A statistical test that asks whether the answers differ from what random choosing would give."
+  },
+  {
+   "id": "significant",
+   "term": "Significant",
+   "definition": "Unlikely to be due to chance alone (here, p below .05). It does not mean large or important."
+  },
+  {
+   "id": "standardised-residual",
+   "term": "Standardised Residual",
+   "definition": "A score for one pairing. Above +2 means chosen more than chance predicts; below −2, less."
+  },
+  {
+   "id": "child-computer-interaction",
+   "term": "Child–Computer Interaction (CCI)",
+   "definition": "The field that studies how children use and are affected by technology."
+  }
+ ],
+ "occurrences": [
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 1,
+   "text": "cross-sensory correspondences",
+   "rects": [
+    [
+     0.6458,
+     0.7318,
+     0.8333,
+     0.7441
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 1,
+   "text": "Olfactory",
+   "rects": [
+    [
+     0.7915,
+     0.1036,
+     0.9138,
+     0.1264
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 1,
+   "text": "Tactile,",
+   "rects": [
+    [
+     0.6945,
+     0.1036,
+     0.7864,
+     0.1264
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 1,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.0869,
+     0.6825,
+     0.1366,
+     0.6948
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 1,
+   "text": "association strategies",
+   "rects": [
+    [
+     0.7195,
+     0.801,
+     0.8511,
+     0.8133
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 1,
+   "text": "significant",
+   "rects": [
+    [
+     0.6155,
+     0.7733,
+     0.6789,
+     0.7856
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 2,
+   "text": "Cross-sensory Correspondences",
+   "rects": [
+    [
+     0.3125,
+     0.2414,
+     0.4814,
+     0.2525
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 2,
+   "text": "Olfactory",
+   "rects": [
+    [
+     0.1815,
+     0.2414,
+     0.233,
+     0.2525
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 2,
+   "text": "Tactile,",
+   "rects": [
+    [
+     0.1411,
+     0.2414,
+     0.1806,
+     0.2525
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 2,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.7348,
+     0.1506,
+     0.7788,
+     0.1629
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 2,
+   "text": "association strate- gies",
+   "rects": [
+    [
+     0.8056,
+     0.2474,
+     0.9155,
+     0.2598
+    ],
+    [
+     0.5186,
+     0.2613,
+     0.5441,
+     0.2736
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 2,
+   "text": "significant",
+   "rects": [
+    [
+     0.1541,
+     0.7091,
+     0.2175,
+     0.7214
+    ]
+   ]
+  },
+  {
+   "term": "child-computer-interaction",
+   "page": 2,
+   "text": "Child-Computer Interaction",
+   "rects": [
+    [
+     0.6707,
+     0.4634,
+     0.9012,
+     0.4782
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 3,
+   "text": "cross-sensory correspondences",
+   "rects": [
+    [
+     0.236,
+     0.2336,
+     0.4081,
+     0.2459
+    ]
+   ]
+  },
+  {
+   "term": "bouba-kiki-effect",
+   "page": 3,
+   "text": "Bouba–Kiki",
+   "rects": [
+    [
+     0.2061,
+     0.4055,
+     0.2771,
+     0.4179
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 3,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.1083,
+     0.1091,
+     0.1651,
+     0.1214
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 3,
+   "text": "tactile",
+   "rects": [
+    [
+     0.3546,
+     0.5024,
+     0.3925,
+     0.5147
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 3,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.1668,
+     0.1091,
+     0.211,
+     0.1214
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 3,
+   "text": "Association Strategies.",
+   "rects": [
+    [
+     0.6414,
+     0.1446,
+     0.7704,
+     0.157
+    ]
+   ]
+  },
+  {
+   "term": "child-computer-interaction",
+   "page": 3,
+   "text": "child-computer interaction.",
+   "rects": [
+    [
+     0.2714,
+     0.2613,
+     0.4373,
+     0.2736
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 4,
+   "text": "cross-sensory correspondences",
+   "rects": [
+    [
+     0.1957,
+     0.7317,
+     0.3871,
+     0.7441
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 4,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.2771,
+     0.3652,
+     0.3329,
+     0.3775
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 4,
+   "text": "tactile",
+   "rects": [
+    [
+     0.419,
+     0.6281,
+     0.4568,
+     0.6404
+    ]
+   ]
+  },
+  {
+   "term": "valence",
+   "page": 4,
+   "text": "Valence",
+   "rects": [
+    [
+     0.1579,
+     0.2242,
+     0.2012,
+     0.2353
+    ]
+   ]
+  },
+  {
+   "term": "arousal",
+   "page": 4,
+   "text": "arousal",
+   "rects": [
+    [
+     0.5186,
+     0.4897,
+     0.564,
+     0.502
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 4,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.3645,
+     0.7594,
+     0.4088,
+     0.7717
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 4,
+   "text": "association strategies,",
+   "rects": [
+    [
+     0.3455,
+     0.3082,
+     0.4921,
+     0.3205
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 5,
+   "text": "cross-sensory correspondences",
+   "rects": [
+    [
+     0.0869,
+     0.1402,
+     0.2796,
+     0.1525
+    ]
+   ]
+  },
+  {
+   "term": "bouba-kiki-effect",
+   "page": 5,
+   "text": "bouba-kiki",
+   "rects": [
+    [
+     0.1099,
+     0.7317,
+     0.177,
+     0.7441
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 5,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.2568,
+     0.6176,
+     0.3117,
+     0.6299
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 5,
+   "text": "tactile",
+   "rects": [
+    [
+     0.283,
+     0.1955,
+     0.3209,
+     0.2079
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 5,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.3224,
+     0.1955,
+     0.3651,
+     0.2079
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 6,
+   "text": "cross-sensory correspondences",
+   "rects": [
+    [
+     0.684,
+     0.3828,
+     0.8756,
+     0.3951
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 6,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.1571,
+     0.8424,
+     0.212,
+     0.8547
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 6,
+   "text": "Tactile",
+   "rects": [
+    [
+     0.1685,
+     0.234,
+     0.216,
+     0.2463
+    ]
+   ]
+  },
+  {
+   "term": "anthropomorphic",
+   "page": 6,
+   "text": "anthropomorphic",
+   "rects": [
+    [
+     0.218,
+     0.4965,
+     0.3255,
+     0.5088
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 6,
+   "text": "Stimuli.",
+   "rects": [
+    [
+     0.2177,
+     0.234,
+     0.273,
+     0.2463
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 6,
+   "text": "association strategies",
+   "rects": [
+    [
+     0.6619,
+     0.6319,
+     0.7913,
+     0.6442
+    ]
+   ]
+  },
+  {
+   "term": "chi-square-test",
+   "page": 6,
+   "text": "Chi-square",
+   "rects": [
+    [
+     0.6571,
+     0.4658,
+     0.7235,
+     0.4782
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 6,
+   "text": "sig- nificant",
+   "rects": [
+    [
+     0.8912,
+     0.8147,
+     0.9155,
+     0.8271
+    ],
+    [
+     0.5186,
+     0.8286,
+     0.5671,
+     0.8409
+    ]
+   ]
+  },
+  {
+   "term": "standardised-residual",
+   "page": 6,
+   "text": "Residual",
+   "rects": [
+    [
+     0.8615,
+     0.4658,
+     0.9131,
+     0.4782
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 7,
+   "text": "-Olfactory",
+   "rects": [
+    [
+     0.2663,
+     0.4361,
+     0.3324,
+     0.4472
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 7,
+   "text": "Tactile",
+   "rects": [
+    [
+     0.3327,
+     0.1373,
+     0.3745,
+     0.1483
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 7,
+   "text": "Stimuli",
+   "rects": [
+    [
+     0.3758,
+     0.1373,
+     0.4212,
+     0.1483
+    ]
+   ]
+  },
+  {
+   "term": "standardised-residual",
+   "page": 7,
+   "text": "residuals",
+   "rects": [
+    [
+     0.2509,
+     0.8247,
+     0.3129,
+     0.837
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 8,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.2361,
+     0.6026,
+     0.2927,
+     0.6136
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 8,
+   "text": "tactile",
+   "rects": [
+    [
+     0.2455,
+     0.3538,
+     0.2841,
+     0.3648
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 8,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.1265,
+     0.6151,
+     0.1709,
+     0.6262
+    ]
+   ]
+  },
+  {
+   "term": "chi-square-test",
+   "page": 8,
+   "text": "chi-square",
+   "rects": [
+    [
+     0.3175,
+     0.6821,
+     0.3832,
+     0.6945
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 8,
+   "text": "significant",
+   "rects": [
+    [
+     0.1978,
+     0.696,
+     0.2611,
+     0.7083
+    ]
+   ]
+  },
+  {
+   "term": "standardised-residual",
+   "page": 8,
+   "text": "residuals",
+   "rects": [
+    [
+     0.1416,
+     0.7899,
+     0.197,
+     0.8023
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 9,
+   "text": "Cross-Sensory Correspondences",
+   "rects": [
+    [
+     0.7795,
+     0.1968,
+     0.8969,
+     0.2116
+    ],
+    [
+     0.5591,
+     0.2131,
+     0.7003,
+     0.2279
+    ]
+   ]
+  },
+  {
+   "term": "bouba-kiki-effect",
+   "page": 9,
+   "text": "“Bouba–Kiki”",
+   "rects": [
+    [
+     0.7151,
+     0.2877,
+     0.7969,
+     0.3
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 9,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.3653,
+     0.1091,
+     0.421,
+     0.1214
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 9,
+   "text": "tactile",
+   "rects": [
+    [
+     0.2996,
+     0.1091,
+     0.338,
+     0.1214
+    ]
+   ]
+  },
+  {
+   "term": "valence",
+   "page": 9,
+   "text": "Valence",
+   "rects": [
+    [
+     0.1135,
+     0.455,
+     0.1603,
+     0.4673
+    ]
+   ]
+  },
+  {
+   "term": "arousal",
+   "page": 9,
+   "text": "arousal",
+   "rects": [
+    [
+     0.7786,
+     0.6059,
+     0.8233,
+     0.6183
+    ]
+   ]
+  },
+  {
+   "term": "anthropomorphic",
+   "page": 9,
+   "text": "anthropomorphic",
+   "rects": [
+    [
+     0.6396,
+     0.6751,
+     0.7445,
+     0.6874
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 9,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.4227,
+     0.1091,
+     0.4659,
+     0.1214
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 9,
+   "text": "Association Strategies",
+   "rects": [
+    [
+     0.246,
+     0.2697,
+     0.4248,
+     0.2845
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 9,
+   "text": "significant",
+   "rects": [
+    [
+     0.59,
+     0.772,
+     0.6542,
+     0.7843
+    ]
+   ]
+  },
+  {
+   "term": "standardised-residual",
+   "page": 9,
+   "text": "residuals",
+   "rects": [
+    [
+     0.2509,
+     0.2076,
+     0.3129,
+     0.2199
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 10,
+   "text": "cross-sensory correspon- dences",
+   "rects": [
+    [
+     0.3287,
+     0.5485,
+     0.4839,
+     0.5609
+    ],
+    [
+     0.0869,
+     0.5624,
+     0.1296,
+     0.5747
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 10,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.192,
+     0.4425,
+     0.2546,
+     0.4548
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 10,
+   "text": "tactile-emotion",
+   "rects": [
+    [
+     0.1088,
+     0.6316,
+     0.1999,
+     0.6439
+    ]
+   ]
+  },
+  {
+   "term": "valence",
+   "page": 10,
+   "text": "Valence",
+   "rects": [
+    [
+     0.5859,
+     0.5901,
+     0.6309,
+     0.6024
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 10,
+   "text": "stimuli.",
+   "rects": [
+    [
+     0.3021,
+     0.4425,
+     0.3554,
+     0.4548
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 10,
+   "text": "association strategies",
+   "rects": [
+    [
+     0.1858,
+     0.8412,
+     0.3184,
+     0.8535
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 11,
+   "text": "Cross-Sensory Correspondences",
+   "rects": [
+    [
+     0.1274,
+     0.2534,
+     0.3886,
+     0.2682
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 11,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.3529,
+     0.6625,
+     0.4085,
+     0.6749
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 11,
+   "text": "tactile–linguistic",
+   "rects": [
+    [
+     0.7501,
+     0.704,
+     0.8542,
+     0.7164
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 11,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.1515,
+     0.6348,
+     0.1941,
+     0.6472
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 11,
+   "text": "significant",
+   "rects": [
+    [
+     0.1662,
+     0.3858,
+     0.2297,
+     0.3981
+    ]
+   ]
+  },
+  {
+   "term": "cross-sensory-correspondence",
+   "page": 12,
+   "text": "cross-sensory corre- spondences",
+   "rects": [
+    [
+     0.3576,
+     0.1805,
+     0.4839,
+     0.1928
+    ],
+    [
+     0.0869,
+     0.1943,
+     0.1569,
+     0.2067
+    ]
+   ]
+  },
+  {
+   "term": "bouba-kiki-effect",
+   "page": 12,
+   "text": "bouba/kiki",
+   "rects": [
+    [
+     0.6181,
+     0.8054,
+     0.6704,
+     0.8152
+    ]
+   ]
+  },
+  {
+   "term": "olfaction",
+   "page": 12,
+   "text": "olfactory",
+   "rects": [
+    [
+     0.2041,
+     0.222,
+     0.2591,
+     0.2343
+    ]
+   ]
+  },
+  {
+   "term": "tactile",
+   "page": 12,
+   "text": "tactile",
+   "rects": [
+    [
+     0.1392,
+     0.222,
+     0.1771,
+     0.2343
+    ]
+   ]
+  },
+  {
+   "term": "stimulus",
+   "page": 12,
+   "text": "stimuli",
+   "rects": [
+    [
+     0.2306,
+     0.3327,
+     0.2736,
+     0.345
+    ]
+   ]
+  },
+  {
+   "term": "association-strategy",
+   "page": 12,
+   "text": "association strate- gies",
+   "rects": [
+    [
+     0.3738,
+     0.4157,
+     0.4839,
+     0.4281
+    ],
+    [
+     0.0869,
+     0.4296,
+     0.112,
+     0.4419
+    ]
+   ]
+  },
+  {
+   "term": "significant",
+   "page": 12,
+   "text": "significant",
+   "rects": [
+    [
+     0.2016,
+     0.6809,
+     0.2649,
+     0.6932
+    ]
+   ]
+  },
+  {
+   "term": "child-computer-interaction",
+   "page": 12,
+   "text": "CCI",
+   "rects": [
+    [
+     0.1371,
+     0.6095,
+     0.1623,
+     0.6218
+    ]
+   ]
+  }
+ ]
+}
