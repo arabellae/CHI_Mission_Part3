@@ -114,7 +114,7 @@ function buildKey() {
   });
   const all = el("button", { type: "button", "class": "keyitem tile all", "data-all": "1", "aria-pressed": "true" });
   KEY_ORDER.forEach((k, i) => all.style.setProperty("--c" + (i + 1), state.cats[k].color));
-  all.append(el("span", { "class": "tl" }, "All seven"), el("span", { "class": "sr-only" }, ". Show every highlight."));
+  all.append(el("span", { "class": "tl" }, "All Seven"), el("span", { "class": "sr-only" }, ". Show every highlight."));
   all.addEventListener("click", clearFilters);
   host.appendChild(all);
   syncKey();
@@ -127,18 +127,18 @@ function syncKey() {
   const label = $("key-label"), desc = $("key-desc");
   const keys = [...state.active];
   if (!keys.length) {
-    label.textContent = "All seven questions";
+    label.textContent = "All Seven Questions";
     desc.textContent = "Every highlight is showing. Press a color to show only that question.";
-    Site.setContext("Reading lens – All seven questions", "all");
+    Site.setContext("Reading Lens – All Seven Questions", "all");
   } else if (keys.length === 1) {
     const c = state.cats[keys[0]], mine = keys[0].startsWith("c:") ? Notes.categories().find((x) => "c:" + x.id === keys[0]) : null;
-    label.textContent = c ? c.plain_question : (mine ? mine.name : "One category");
+    label.textContent = c ? c.plain_question : (mine ? mine.name : "One Category");
     desc.textContent = c ? c.explain : "Showing only your notes in this category.";
-    Site.setContext("Reading lens – " + label.textContent, c ? c.color + "|" + c.edge : "doc");
+    Site.setContext("Reading Lens – " + label.textContent, c ? c.color + "|" + c.edge : "doc");
   } else {
-    label.textContent = keys.length + " questions";
-    desc.textContent = "Showing only the colors you pressed. Press All seven to see everything.";
-    Site.setContext("Reading lens – " + keys.length + " questions", "all");
+    label.textContent = keys.length + " Questions";
+    desc.textContent = "Showing only the colors you pressed. Press All Seven to see everything.";
+    Site.setContext("Reading Lens – " + keys.length + " Questions", "all");
   }
 }
 function renderCustomKey() {

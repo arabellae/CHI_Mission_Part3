@@ -5,7 +5,7 @@
 
   var NAV = [
     { href: "index.html", label: "Home" },
-    { label: "Understand", items: [["short-version.html", "Short Version"], ["study.html", "The Study"], ["findings.html", "What They Found"], ["cautions.html", "Be Cautious"]] },
+    { label: "Understand", items: [["short-version.html", "Short Version · 3 Min"], ["study.html", "How the Study Worked"], ["findings.html", "What the Children Found"], ["cautions.html", "How Much to Trust It"]] },
     { href: "read.html", label: "Read the Paper" },
     { label: "Reference", items: [["glossary.html", "Glossary"], ["downloads.html", "Downloads and Credit"]] }
   ];
@@ -97,7 +97,7 @@
     if (download) cta.setAttribute("download", ""); else cta.removeAttribute("download");
   }
   setContext(ds.ctx || document.title.split(" | ")[0], ds.ctxSwatch);
-  setCta(ds.ctaLabel != null ? ds.ctaLabel : (file === "read.html" ? "" : "Read the paper"), ds.ctaHref || "read.html", ds.ctaDownload != null);
+  setCta(ds.ctaLabel != null ? ds.ctaLabel : (file === "read.html" ? "" : "Read the Paper"), ds.ctaHref || "read.html", ds.ctaDownload != null);
   window.Site = { setContext: setContext, setCta: setCta };
 
   header.querySelectorAll("[data-theme-set]").forEach(function (b) {

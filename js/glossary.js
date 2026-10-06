@@ -22,7 +22,7 @@
     if (params.get("from") === "read" && page >= 1 && page <= 14) {
       var bar = document.getElementById("backbar");
       bar.hidden = false;
-      bar.appendChild(el("a", { "class": "btn secondary", href: "read.html#page=" + page }, "← Back to page " + page));
+      bar.appendChild(el("a", { "class": "btn secondary", href: "read.html#page=" + page }, "← Back to Page " + page));
       Site.setCta("Back to reading", "read.html#page=" + page);
     }
     var id = decodeURIComponent(location.hash.slice(1));

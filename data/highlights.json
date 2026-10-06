@@ -68,7 +68,7 @@
  "categories": [
   {
    "key": "G",
-   "label": "Know first",
+   "label": "Know First",
    "question": "What do I need to know first?",
    "color": "#dcdce1",
    "style": "highlight",
@@ -79,7 +79,7 @@
   },
   {
    "key": "B",
-   "label": "Why the study",
+   "label": "Why the Study",
    "question": "Why did they run this study?",
    "color": "#c4e3ff",
    "style": "highlight",
@@ -90,7 +90,7 @@
   },
   {
    "key": "S",
-   "label": "What they did",
+   "label": "What They Did",
    "question": "What did they actually do?",
    "color": "#cdf3c6",
    "style": "highlight",
@@ -101,7 +101,7 @@
   },
   {
    "key": "R",
-   "label": "What they found",
+   "label": "What They Found",
    "question": "What did they find?",
    "color": "#ffd3e6",
    "style": "highlight",
@@ -112,7 +112,7 @@
   },
   {
    "key": "E",
-   "label": "Why kids answered",
+   "label": "Why Kids Answered",
    "question": "Why did kids answer that way?",
    "color": "#e4d6fb",
    "style": "highlight",
@@ -123,7 +123,7 @@
   },
   {
    "key": "I",
-   "label": "So what",
+   "label": "So What",
    "question": "So what? What can it be used for?",
    "color": "#ffddaa",
    "style": "highlight",
@@ -134,7 +134,7 @@
   },
   {
    "key": "U",
-   "label": "Be cautious",
+   "label": "Be Cautious",
    "question": "Should I be cautious?",
    "color": "#b3121a",
    "style": "underline",
