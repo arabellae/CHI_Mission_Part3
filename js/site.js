@@ -158,8 +158,9 @@
     var items = toc.map(function (a) { return { a: a, t: document.getElementById(a.getAttribute("href").slice(1)) }; }).filter(function (x) { return x.t; });
     var spy = items.filter(function (x) { return canvas && canvas.contains(x.t); });
     var mark = function (it) { items.forEach(function (x) { if (x === it) x.a.setAttribute("aria-current", "true"); else x.a.removeAttribute("aria-current"); }); };
+    var pinUntil = 0;
     var update = function () {
-      if (!spy.length) return;
+      if (!spy.length || Date.now() < pinUntil) return;
       var cur = spy[0];
       spy.forEach(function (x) { if (x.t.getBoundingClientRect().top <= READ_LINE + 1) cur = x; });
       if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2) cur = spy[spy.length - 1];
@@ -170,13 +171,16 @@
       canvas.style.paddingBottom = "";
       var last = spy[spy.length - 1].t;
       var lastTop = last.getBoundingClientRect().top + window.pageYOffset;
-      var extra = Math.max(0, lastTop - 18 + window.innerHeight - document.documentElement.scrollHeight);
+      var m = document.querySelector("main");
+      var contentBottom = canvas.getBoundingClientRect().bottom + window.pageYOffset + parseFloat(getComputedStyle(m).paddingBottom);
+      var extra = Math.max(0, lastTop - 18 + window.innerHeight - contentBottom);
       if (extra > 0) canvas.style.paddingBottom = "calc(2.6rem + " + Math.ceil(extra) + "px)";
     };
     items.forEach(function (x) {
       x.a.addEventListener("click", function () {
         mark(x);
-        if (!(canvas && canvas.contains(x.t))) { x.t.setAttribute("tabindex", "-1"); x.t.focus({ preventScroll: true }); }
+        if (!(canvas && canvas.contains(x.t))) { pinUntil = Date.now() + 900; x.t.setAttribute("tabindex", "-1"); x.t.focus({ preventScroll: true }); }
+        else pinUntil = 0;
       });
     });
     sizePad(); update();

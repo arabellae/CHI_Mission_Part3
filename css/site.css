@@ -528,6 +528,29 @@ dl dd { margin: .45rem 0 0; font-size: .82rem; line-height: 1.5; color: var(--fg
 .kp ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .65rem; }
 .kp li { position: relative; padding-left: .95rem; font-size: .78rem; line-height: 1.45; }
 .kp li::before { content: "\25AA"; position: absolute; left: 0; }
+/* Understand pages that share the three-column layout (How the Study Worked, What the Children Found, How Much to Trust It) */
+.sv-canvas .lede { text-align: left; max-width: none; margin: -.6rem 0 1.4rem; font-size: 1rem; }
+.sv-canvas .hint { margin: .6rem 0 0; }
+.sv-canvas ul, .sv-canvas ol { overflow-wrap: anywhere; }
+.sv-canvas li { font-size: .85rem; line-height: 1.55; }
+.sv-canvas .kit { max-width: none; grid-template-columns: 1fr; background: none; padding: 0; margin: .4rem 0 .2rem; }
+.sv-canvas .kit .col { border-left: 0; border-top: 1px solid var(--line); padding: 1rem 0; display: grid; grid-template-columns: 8.5rem 1fr; column-gap: 1.2rem; align-items: center; }
+.sv-canvas .kit .tag { grid-column: 1; grid-row: 2; align-self: start; }
+.sv-canvas .kit h3 { grid-column: 1; grid-row: 1; align-self: end; margin: 0 0 .2rem; font-size: 1.1rem; }
+.sv-canvas .kit .figs { grid-column: 2; grid-row: 1 / 3; gap: .6rem; }
+.sv-canvas ol.steps { margin: .3rem 0 0; }
+.sv-canvas ol.steps > li { margin: 0; padding: 1rem 0 1rem 3rem; border-top: 1px solid var(--line); font-size: .85rem; line-height: 1.55; }
+.sv-canvas ol.steps > li::before { top: 1rem; width: 2rem; height: 2rem; background: none; border: 1.5px solid var(--fg); color: var(--fg); font: 500 .85rem var(--sans); }
+.sv-canvas .step-t { display: block; font: 500 1.05rem/1.4 var(--sans); margin-bottom: .2rem; }
+.sv-canvas .bar { margin: .15rem 0; padding: .3rem 0; }
+.sv-canvas .bar .fill { background: var(--accent); }
+.sv-canvas .bars.found .fill { background: #b8326f; }
+.sv-canvas .bars.neither .fill { background: #5b5b66; }
+.sv-canvas .callout-block { background: var(--card); color: var(--fg); border-left: 4px solid var(--fg); margin: 0 0 .4rem; }
+.sv-canvas table { font-size: .8rem; }
+.sv-canvas th { font-weight: 500; }
+.kp p { font-size: .78rem; line-height: 1.5; margin: 0 0 .8rem; }
+.kp .note { margin: 1.4rem 0 0; font-size: .78rem; line-height: 1.5; background: var(--callout-bg); border-left: 0; padding: .8rem 1rem; }
 .callout-block { background: var(--callout-bg); color: var(--callout-fg); padding: .8rem 1rem; margin: 1rem 0; font: .9rem/1.5 var(--sans); }
 .callout-block strong { font-size: 1.05rem; font-weight: 600; }
 @media (max-width: 1100px) {
@@ -546,6 +569,8 @@ dl dd { margin: .45rem 0 0; font-size: .82rem; line-height: 1.5; color: var(--fg
   .sv-toc a:hover { background: none; }
   .sv-toc a[aria-current="true"] { border-left: 0; padding-left: 0; border-bottom-color: var(--fg); }
   .sv-canvas { padding: 1.4rem 1rem 1.6rem; }
+  .sv-canvas .kit .col { grid-template-columns: 5.5rem 1fr; column-gap: .8rem; }
+  .sv-canvas .kit .figs { gap: .35rem; }
   .sv-canvas h1 { font-size: 2rem; }
   .kp { position: static; margin-top: 1rem; }
 }
