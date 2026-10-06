@@ -149,15 +149,39 @@
   });
   apply(getGuide());
 
-  /* "On this page" list: mark the section being read. */
+  /* "On this page" list. The current row is the last heading above a reading line near the top of the window.
+     A click marks its row at once. Extra space after the last section lets every heading reach the top, so no link looks dead. */
   var toc = Array.prototype.slice.call(document.querySelectorAll(".sv-toc a"));
-  if (toc.length && "IntersectionObserver" in window) {
-    var targets = toc.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
-    var mark = function (i) { toc.forEach(function (a, j) { if (j === i) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); }); };
-    mark(0);
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) mark(targets.indexOf(en.target)); });
-    }, { rootMargin: "-10% 0px -75% 0px" });
-    targets.forEach(function (t) { if (t) io.observe(t); });
+  if (toc.length) {
+    var READ_LINE = 120;
+    var canvas = document.querySelector(".sv-canvas");
+    var items = toc.map(function (a) { return { a: a, t: document.getElementById(a.getAttribute("href").slice(1)) }; }).filter(function (x) { return x.t; });
+    var spy = items.filter(function (x) { return canvas && canvas.contains(x.t); });
+    var mark = function (it) { items.forEach(function (x) { if (x === it) x.a.setAttribute("aria-current", "true"); else x.a.removeAttribute("aria-current"); }); };
+    var update = function () {
+      if (!spy.length) return;
+      var cur = spy[0];
+      spy.forEach(function (x) { if (x.t.getBoundingClientRect().top <= READ_LINE + 1) cur = x; });
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2) cur = spy[spy.length - 1];
+      mark(cur);
+    };
+    var sizePad = function () {
+      if (!canvas || !spy.length) return;
+      canvas.style.paddingBottom = "";
+      var last = spy[spy.length - 1].t;
+      var lastTop = last.getBoundingClientRect().top + window.pageYOffset;
+      var extra = Math.max(0, lastTop - 18 + window.innerHeight - document.documentElement.scrollHeight);
+      if (extra > 0) canvas.style.paddingBottom = "calc(2.6rem + " + Math.ceil(extra) + "px)";
+    };
+    items.forEach(function (x) {
+      x.a.addEventListener("click", function () {
+        mark(x);
+        if (!(canvas && canvas.contains(x.t))) { x.t.setAttribute("tabindex", "-1"); x.t.focus({ preventScroll: true }); }
+      });
+    });
+    sizePad(); update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", function () { sizePad(); update(); });
+    window.addEventListener("load", function () { sizePad(); update(); });
   }
 })();
