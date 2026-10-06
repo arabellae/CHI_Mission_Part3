@@ -396,7 +396,7 @@ details.krow .dbody ul { margin: .1rem 0 0; padding-left: 1.1rem; color: var(--m
   --bg: #ffffff; --card: #ffffff; --panel: #f2efe8; --canvas: #ffffff; --fg: #111111; --muted: #625e56; --line: #d9d5cc; --accent: #111111; --on-accent: #ffffff; --you: #b8761a; --focus: #2a5db0;
   --tip-bg: #111111; --tip-fg: #fbf7f0; --callout-bg: #e9e4d8; --callout-fg: #111111; --danger: #a3121a;
   position: fixed; inset: 0; z-index: 80; margin: 0; padding: 0; background: #fff; color: var(--fg); color-scheme: light; overflow: hidden; display: grid;
-  grid-template-columns: 17rem minmax(0, 1fr) 19rem; grid-template-rows: minmax(0, 1fr); grid-template-areas: "left paper right"; gap: 0 .5rem; align-items: stretch;
+  grid-template-columns: 17rem minmax(0, 1fr) 22rem; grid-template-rows: minmax(0, 1fr); grid-template-areas: "left paper right"; gap: 0 .5rem; align-items: stretch;
 }
 .rgrid.fs .a-about { display: none; }
 .rgrid.fs .a-canvas { display: contents; }
@@ -419,9 +419,16 @@ details.krow .dbody ul { margin: .1rem 0 0; padding-left: 1.1rem; color: var(--m
 .rgrid.fs .pager { display: contents; }
 .rgrid.fs .arrow { position: fixed; top: 50%; transform: translateY(-50%); z-index: 6; background: rgba(255, 255, 255, .92); }
 .rgrid.fs #prev { left: calc(17rem + .9rem); }
-.rgrid.fs #next { right: calc(19rem + .9rem); }
+.rgrid.fs #next { right: calc(22rem + .9rem); }
 .rgrid.fs .reader { flex: 0 1 auto; min-width: 0; }
 .rgrid.fs .stage { padding: 0; overflow: auto; max-width: 100%; max-height: 100vh; }
+/* Side columns sit in the vertical middle of the window; when taller than the window they start at the top and scroll */
+@media (min-width: 1101px) {
+  .rgrid.fs .fs-left > :first-child { margin-top: auto; }
+  .rgrid.fs .fs-left > :last-child { margin-bottom: auto; }
+  .rgrid.fs .a-key { display: flex; flex-direction: column; }
+  .rgrid.fs .a-key > .key { flex: none; margin-block: auto; }
+}
 @media (max-height: 800px) {
   .rgrid.fs .scrub.v { --row: 17px; }
   .rgrid.fs .scrub.v .lbl, .rgrid.fs .scrub.v .num { font-size: .64rem; }
@@ -503,6 +510,7 @@ dl dd { margin: .45rem 0 0; font-size: .82rem; line-height: 1.5; color: var(--fg
 .sv-toc a:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
 .sv-toc a[aria-current="true"] { color: var(--fg); font-weight: 500; border-left: 2px solid var(--fg); padding-left: calc(.9rem - 1px); }
 .sv-canvas { background: var(--canvas); padding: 2.2rem 2.2rem 2.6rem; min-width: 0; }
+.sv-canvas > .tabs { margin: -.6rem 0 1.4rem -.55rem; }
 .sv-canvas h1 { text-align: left; font-size: 2.5rem; line-height: 1.1; margin: 0 0 1.5rem; }
 .sv-canvas h2 { font-size: 1.1rem; margin: 2rem 0 .55rem; scroll-margin-top: 1.2rem; }
 .sv-canvas p { margin: 0 0 .9rem; font-size: .85rem; line-height: 1.55; overflow-wrap: anywhere; }
