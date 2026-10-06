@@ -14,8 +14,8 @@ let chain = Promise.resolve();
 
 // Which section each PDF page belongs to (used by the scrubber). Pages that hold two sections are named for the first.
 const PAGE_SECTION = ["Abstract", "Intro", "Background", "Background", "Study", "Study", "Findings", "Findings", "Findings", "Discussion", "Discussion", "Wrap-Up", "References", "References"];
-// Key groups: plain headings over the seven questions.
-const KEY_GROUPS = [["Before You Read", ["G"]], ["The Study", ["B", "S"]], ["The Results", ["R", "E"]], ["Using It", ["I", "U"]]];
+// The seven question tiles, in rows of four. The eighth tile (All seven) clears the filters.
+const KEY_ORDER = ["G", "B", "S", "R", "E", "I", "U"];
 
 function el(tag, attrs, text) {
   const e = document.createElement(tag);
@@ -99,36 +99,57 @@ function toggleActive(k, btn) {
   btn.setAttribute("aria-pressed", state.active.has(k) ? "true" : "false");
   onFilterChange();
 }
+/* Each tile is a color with its name written on it, so the key never depends on color alone. */
 function buildKey() {
   const host = $("key-groups");
-  KEY_GROUPS.forEach(([title, keys]) => {
-    host.appendChild(el("h3", {}, title));
-    keys.forEach((k) => {
-      const c = state.cats[k];
-      const b = el("button", { type: "button", "class": "keyitem", "aria-pressed": "false" });
-      const sw = el("span", { "class": "sw" + (k === "U" ? " u" : ""), "aria-hidden": "true" });
-      sw.style.setProperty("--f", c.color); sw.style.setProperty("--e", c.edge);
-      b.append(sw, el("span", {}, c.plain_question), el("span", { "class": "sr-only" }, ". " + c.explain));
-      b.addEventListener("click", () => toggleActive(k, b));
-      b.addEventListener("mouseenter", () => showKeyTip(c, b)); b.addEventListener("focus", () => showKeyTip(c, b));
-      b.addEventListener("mouseleave", hideKeyTip); b.addEventListener("blur", hideKeyTip);
-      host.appendChild(b);
-    });
+  KEY_ORDER.forEach((k) => {
+    const c = state.cats[k];
+    const b = el("button", { type: "button", "class": "keyitem tile" + (k === "U" ? " u" : ""), "data-k": k, "aria-pressed": "false" });
+    b.style.setProperty("--f", c.color); b.style.setProperty("--e", c.edge);
+    b.append(el("span", { "class": "tl" }, c.label), el("span", { "class": "sr-only" }, ". " + c.plain_question + " " + c.explain));
+    b.addEventListener("click", () => toggleActive(k, b));
+    b.addEventListener("mouseenter", () => showKeyTip(c, b)); b.addEventListener("focus", () => showKeyTip(c, b));
+    b.addEventListener("mouseleave", hideKeyTip); b.addEventListener("blur", hideKeyTip);
+    host.appendChild(b);
   });
-  host.appendChild(el("h3", {}, "Words"));
-  const w = el("div", { "class": "keyitem static" });
-  w.append(el("span", { "class": "sw d", "aria-hidden": "true" }), el("span", {}, "Glossary word. Click it for the meaning."));
-  host.appendChild(w);
+  const all = el("button", { type: "button", "class": "keyitem tile all", "data-all": "1", "aria-pressed": "true" });
+  KEY_ORDER.forEach((k, i) => all.style.setProperty("--c" + (i + 1), state.cats[k].color));
+  all.append(el("span", { "class": "tl" }, "All seven"), el("span", { "class": "sr-only" }, ". Show every highlight."));
+  all.addEventListener("click", clearFilters);
+  host.appendChild(all);
+  syncKey();
+}
+/* Keep the tiles, the label under them and the bar's middle label in step with the active filters. */
+function syncKey() {
+  document.querySelectorAll(".keyitem[data-k]").forEach((b) => b.setAttribute("aria-pressed", state.active.has(b.dataset.k) ? "true" : "false"));
+  const all = document.querySelector(".keyitem[data-all]");
+  if (all) all.setAttribute("aria-pressed", state.active.size ? "false" : "true");
+  const label = $("key-label"), desc = $("key-desc");
+  const keys = [...state.active];
+  if (!keys.length) {
+    label.textContent = "All seven questions";
+    desc.textContent = "Every highlight is showing. Press a color to show only that question.";
+    Site.setContext("Reading lens – All seven questions", "all");
+  } else if (keys.length === 1) {
+    const c = state.cats[keys[0]], mine = keys[0].startsWith("c:") ? Notes.categories().find((x) => "c:" + x.id === keys[0]) : null;
+    label.textContent = c ? c.plain_question : (mine ? mine.name : "One category");
+    desc.textContent = c ? c.explain : "Showing only your notes in this category.";
+    Site.setContext("Reading lens – " + label.textContent, c ? c.color + "|" + c.edge : "doc");
+  } else {
+    label.textContent = keys.length + " questions";
+    desc.textContent = "Showing only the colors you pressed. Press All seven to see everything.";
+    Site.setContext("Reading lens – " + keys.length + " questions", "all");
+  }
 }
 function renderCustomKey() {
   const host = $("key-custom");
   host.textContent = "";
   const cats = Notes.categories();
   if (!cats.length) return;
-  host.appendChild(el("h3", {}, "My Categories"));
+  host.appendChild(el("h3", {}, "My categories"));
   cats.forEach((c) => {
     const col = colorOf(c.color), k = "c:" + c.id;
-    const b = el("button", { type: "button", "class": "keyitem", "aria-pressed": state.active.has(k) ? "true" : "false" });
+    const b = el("button", { type: "button", "class": "keyitem", "data-k": k, "aria-pressed": state.active.has(k) ? "true" : "false" });
     const sw = el("span", { "class": "sw", "aria-hidden": "true" });
     sw.style.setProperty("--f", col.fill); sw.style.setProperty("--e", col.edge);
     b.append(sw, el("span", {}, c.name));
@@ -138,7 +159,7 @@ function renderCustomKey() {
 }
 const visible = (p) => !state.active.size || state.active.has(p.category);
 const noteVisible = (n) => !state.active.size || (Notes.filterKey(n) !== null && state.active.has(Notes.filterKey(n)));
-function onFilterChange() { applyFilter(); drawNotes(); Notes.setFilter(noteVisible); clearTimeout(noticeTimer); noticeActive = false; refreshStatus(); }
+function onFilterChange() { syncKey(); applyFilter(); drawNotes(); Notes.setFilter(noteVisible); clearTimeout(noticeTimer); noticeActive = false; refreshStatus(); }
 function applyFilter() {
   hlLayer.querySelectorAll(".hl").forEach((h) => h.classList.toggle("dim", !visible(state.byId[h.dataset.pid])));
   focusLayer.querySelectorAll(".focus-hl").forEach((f) => f.setAttribute("tabindex", visible(state.byId[f.dataset.pid]) ? "0" : "-1"));
@@ -178,7 +199,6 @@ function notify(text, actions) { clearTimeout(noticeTimer); noticeActive = true;
 function setStatus(msg, err) { clearTimeout(noticeTimer); noticeActive = false; renderStatus(msg, [], err); }
 function clearFilters() {
   state.active.clear();
-  document.querySelectorAll(".keyitem[aria-pressed]").forEach((b) => b.setAttribute("aria-pressed", "false"));
   onFilterChange();
 }
 
@@ -209,7 +229,7 @@ async function renderPage(n, token, opts) {
   try { await Promise.all([task.promise, tl.render()]); }
   catch (e) { if (token !== state.token) return; throw e; } // a cancelled render is expected when the reader moves on
   if (token !== state.token) return;
-  drawHighlights(); drawTerms(); drawNotes(); updatePager(); updateGuideText();
+  drawHighlights(); drawTerms(); drawNotes(); updatePager(); updateGuideText(); renderTerms();
   refreshStatus();
   if (opts.focusHl) {
     const f = focusLayer.querySelector('.focus-hl[data-pid="' + opts.focusHl + '"]');
@@ -274,7 +294,7 @@ function drawNotes() {
   });
 }
 
-/* ---------- Look For panel ---------- */
+/* ---------- Look For panel, the stats note and the dotted words on this page ---------- */
 function updateGuideText() {
   const pr = state.data.page_prompts[String(state.page)];
   const strip = $("strip"), stats = $("stats");
@@ -282,6 +302,39 @@ function updateGuideText() {
   strip.classList.toggle("new-section", !!(pr && pr.new_section));
   stats.hidden = !(pr && pr.stats_note);
   if (pr && pr.stats_note) stats.textContent = pr.stats_note;
+}
+function renderTerms() {
+  const list = $("terms-list");
+  list.textContent = "";
+  const ids = [...new Set(pageTerms().map((t) => t.term))];
+  ids.forEach((id) => {
+    const t = state.termById[id], li = el("li");
+    li.appendChild(el("a", { href: "glossary.html?from=read&page=" + state.page + "#" + t.id }, t.term));
+    list.appendChild(li);
+  });
+  if (!ids.length) list.appendChild(el("li", {}, "No dotted words on this page."));
+  $("gl-link").setAttribute("href", "glossary.html?from=read&page=" + state.page);
+}
+/* The Questions | Terms | Notes tabs: arrow keys move between them. */
+function initTabs() {
+  const tabs = [...document.querySelectorAll(".ptabs [role=tab]")];
+  const pick = (t, focus) => {
+    tabs.forEach((x) => {
+      const on = x === t;
+      x.setAttribute("aria-selected", on ? "true" : "false"); x.tabIndex = on ? 0 : -1;
+      $(x.getAttribute("aria-controls")).hidden = !on;
+    });
+    if (focus) t.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => pick(t, false));
+    t.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) { e.preventDefault(); pick(tabs[(i + d + tabs.length) % tabs.length], true); }
+      else if (e.key === "Home") { e.preventDefault(); pick(tabs[0], true); }
+      else if (e.key === "End") { e.preventDefault(); pick(tabs[tabs.length - 1], true); }
+    });
+  });
 }
 
 /* ---------- paging: arrows, path scrubber, typed page ---------- */
@@ -321,8 +374,7 @@ function buildScrubber(sc, vertical) {
 }
 function updatePager() {
   const n = TOTAL(), p = state.page;
-  $("page-input").value = String(p);
-  $("page-total").textContent = "of " + n;
+  $("page-select").value = String(p);
   $("prev").disabled = p <= 1; $("next").disabled = p >= n;
   $("zoom-label").textContent = Math.round(state.zoom * 100) + "%";
   document.querySelectorAll(".scrub").forEach((sc) => {
@@ -476,7 +528,13 @@ fab.addEventListener("click", () => { const o = keyPanel.classList.toggle("open"
 /* ---------- wiring ---------- */
 $("prev").addEventListener("click", () => go(state.page - 1, { scroll: false }));
 $("next").addEventListener("click", () => go(state.page + 1, { scroll: false }));
-$("page-input").addEventListener("change", (e) => { const n = Math.round(Number(e.target.value)); if (n >= 1 && n <= TOTAL()) go(n, { scroll: false }); else e.target.value = String(state.page); });
+$("page-select").addEventListener("change", (e) => { const n = Math.round(Number(e.target.value)); if (n >= 1 && n <= TOTAL()) go(n, { scroll: false }); else e.target.value = String(state.page); });
+$("jump-first").addEventListener("click", () => {
+  const list = state.data.passages.filter(visible);
+  if (!list.length) { notify("No highlights to show. Clear the filters to see them."); return; }
+  state.cursorPid = list[0].id;
+  go(list[0].page, { focusHl: list[0].id });
+});
 $("zoom-out").addEventListener("click", () => { state.zoom = Math.max(0.6, +(state.zoom - 0.2).toFixed(2)); schedule(state.page); });
 $("zoom-in").addEventListener("click", () => { state.zoom = Math.min(2.4, +(state.zoom + 0.2).toFixed(2)); schedule(state.page); });
 let rzTimer;
@@ -494,7 +552,11 @@ async function init() {
     data.passages.forEach((p) => { state.byId[p.id] = p; });
     gloss.terms.forEach((t) => { state.termById[t.id] = t; });
     Notes.setGuideCategories(data.categories.map((c) => ({ key: c.key, name: c.name })));
-    buildKey(); buildScrubber($("scrub"), false); buildScrubber($("scrub-v"), true);
+    const sel = $("page-select");
+    sel.textContent = "";
+    for (let p = 1; p <= doc.numPages; p++) sel.appendChild(el("option", { value: String(p) }, "Page " + p + " of " + doc.numPages + " · " + PAGE_SECTION[p - 1]));
+    $("rn-count").textContent = gloss.terms.length + " plain-language terms";
+    buildKey(); initTabs(); buildScrubber($("scrub"), false); buildScrubber($("scrub-v"), true);
     mountPanel($("notes-root"), goToPage, reader);
     Notes.setFilter(noteVisible);
     renderCustomKey();
