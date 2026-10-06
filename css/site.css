@@ -12,7 +12,7 @@
   --display: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --r: 2px;
-  --maxw: 84rem; --prose: 44rem; --gutter: 32px; --side: 16rem; --colgap: 2.2rem;
+  --maxw: 84rem; --prose: 44rem; --gutter: 32px; --side: 16rem; --key: 23rem; --colgap: 2.2rem;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -183,7 +183,7 @@ ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0
 .bar span:first-child { min-width: 9rem; } .bar span:last-child { min-width: 3rem; text-align: right; }
 
 /* ---- Reader: About | the paper on its canvas | the options panel ---- */
-.rgrid { display: grid; grid-template-columns: minmax(0, var(--side)) minmax(0, 1fr) minmax(0, var(--side)); column-gap: var(--colgap); align-items: start; margin-top: .4rem; }
+.rgrid { display: grid; grid-template-columns: minmax(0, var(--side)) minmax(0, 1fr) minmax(0, var(--key)); column-gap: var(--colgap); align-items: start; margin-top: .4rem; }
 .a-about { padding-top: 2.4rem; display: flex; flex-direction: column; gap: 1.6rem; }
 .a-about p { margin: 0; font-size: .9rem; line-height: 1.45; }
 .a-about .about-stat { font-size: 1rem; }
@@ -313,17 +313,19 @@ body.guide-off .focus-hl, body.guide-off .focus-term { display: none; }
 .ptabs button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--fg); }
 .pane { padding: 1.2rem 1.1rem 1.4rem; }
 .pane[hidden] { display: none; }
-.swatches-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.swatches-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .45rem; }
 .tile { position: relative; display: flex; align-items: flex-end; justify-content: flex-start; aspect-ratio: 1; padding: .28rem .25rem; overflow-wrap: break-word; hyphens: none; border: 0; border-bottom: 3px solid var(--e, transparent); background: var(--f); color: #111; text-align: left; font: 500 .56rem/1.15 var(--sans); cursor: pointer; min-width: 0; }
-.keyitem.tile { font: 500 .62rem/1.15 var(--sans); background: var(--f); color: #111; border-radius: 0; border-width: 0 0 3px; border-style: solid; border-color: var(--e, transparent); }
-.keyitem.tile:hover { border-color: var(--e, transparent); }
-.keyitem.tile[aria-pressed="true"] { background: var(--f); font-weight: 500; }
-.tile.u, .keyitem.tile.u[aria-pressed="true"] { background: #fff; border-bottom-style: dashed; }
-.keyitem.tile.all, .keyitem.tile.all[aria-pressed="true"] { background: linear-gradient(90deg, var(--c1) 0 14.28%, var(--c2) 0 28.57%, var(--c3) 0 42.85%, var(--c4) 0 57.14%, var(--c5) 0 71.42%, var(--c6) 0 85.71%, var(--c7) 0); border-bottom-color: transparent; }
-.tile.all { background: linear-gradient(90deg, var(--c1) 0 14.28%, var(--c2) 0 28.57%, var(--c3) 0 42.85%, var(--c4) 0 57.14%, var(--c5) 0 71.42%, var(--c6) 0 85.71%, var(--c7) 0); border-bottom-color: transparent; }
-.tile.all .tl { background: rgba(255, 255, 255, .88); padding: 0 .25rem; }
-.tile[aria-pressed="true"]::after { content: "\2713"; position: absolute; top: .25rem; right: .25rem; width: 1rem; height: 1rem; border-radius: 50%; background: #fff; color: #111; border: 1.5px solid #111; font: 700 .6rem/1 var(--sans); display: grid; place-items: center; }
-.tile:hover { filter: brightness(.96); }
+/* The seven question tiles: true squares, label top left, colored edge along the bottom, black outline and a check when pressed */
+.keyitem.tile { align-items: flex-start; padding: .55rem .5rem; font: 500 .72rem/1.25 var(--sans); background: var(--f); color: #111; border-radius: 0; border-width: 0 0 4px; border-style: solid; border-color: var(--e, transparent); transition: opacity .15s; }
+.keyitem.tile:hover { border-color: var(--e, transparent); filter: none; opacity: .85; }
+.keyitem.tile[aria-pressed="true"] { background: var(--f); font-weight: 600; outline: 2px solid #111; outline-offset: -2px; }
+.keyitem.tile.u, .keyitem.tile.u[aria-pressed="true"] { background: #fff; border-bottom-style: dashed; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .14); }
+.keyitem.tile.all, .keyitem.tile.all[aria-pressed="true"] { background: linear-gradient(90deg, var(--c1) 0 14.28%, var(--c2) 0 28.57%, var(--c3) 0 42.85%, var(--c4) 0 57.14%, var(--c5) 0 71.42%, var(--c6) 0 85.71%, var(--c7) 0); border-bottom-color: transparent; border-bottom-width: 0; }
+.keyitem.tile.all .tl { background: #fff; padding: .12rem .35rem; }
+.keyitem.tile[aria-pressed="true"]::after { content: "\2713"; position: absolute; right: .5rem; bottom: .75rem; width: 1rem; height: 1rem; border-radius: 50%; background: #111; color: #fff; border: 0; font: 700 .6rem/1 var(--sans); display: grid; place-items: center; }
+.keyitem.tile.all[aria-pressed="true"]::after { bottom: .5rem; }
+.swatches-grid.filtered .keyitem.tile[aria-pressed="false"] { opacity: .4; }
+.swatches-grid.filtered .keyitem.tile[aria-pressed="false"]:hover { opacity: .75; }
 .key-label { margin: .8rem 0 0; font: 500 .85rem var(--sans); }
 .key-desc { margin: .15rem 0 0; font-size: .75rem; line-height: 1.4; color: var(--muted); }
 .jump { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.2rem; background: none; border: 0; padding: .2rem 0; font: 500 .66rem var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); cursor: pointer; }
@@ -362,9 +364,10 @@ details.krow .dbody ul { margin: .1rem 0 0; padding-left: 1.1rem; color: var(--m
 .key-fab { display: none; }
 .fs-only { display: none; }
 
+@media (min-width: 1101px) and (max-width: 1359px) { .rgrid { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) minmax(0, 20rem); } }
 /* Narrower screens: one column; the options panel becomes a pop-up opened with the Key button */
 @media (max-width: 1100px) {
-  .rgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 17rem); column-gap: 2rem; }
+  .rgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 20rem); column-gap: 2rem; }
   .a-about { grid-column: 1 / -1; padding-top: .5rem; }
   .a-about .readnext { display: none; }
   .a-canvas { grid-column: 1; padding: .75rem 1.4rem 1.4rem; }

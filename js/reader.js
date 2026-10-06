@@ -122,6 +122,8 @@ function buildKey() {
 /* Keep the tiles, the label under them and the bar's middle label in step with the active filters. */
 function syncKey() {
   document.querySelectorAll(".keyitem[data-k]").forEach((b) => b.setAttribute("aria-pressed", state.active.has(b.dataset.k) ? "true" : "false"));
+  const grid = $("key-groups");
+  if (grid) grid.classList.toggle("filtered", state.active.size > 0);
   const all = document.querySelector(".keyitem[data-all]");
   if (all) all.setAttribute("aria-pressed", state.active.size ? "false" : "true");
   const label = $("key-label"), desc = $("key-desc");
